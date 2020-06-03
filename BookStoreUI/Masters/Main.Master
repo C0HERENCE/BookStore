@@ -1,0 +1,72 @@
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="BookStoreUI.Masters.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../Public/CSS/bootstrap.css" rel="stylesheet" />
+    <link href="../Public/CSS/Custom.css" rel="stylesheet" />
+    <script src="../Public/JS/jquery-3.5.1.js" type="text/javascript"></script>
+    <script src="../Public/JS/bootstrap.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <nav class="navbar py-1 bg-light">
+         <div class="container d-flex justify-content-between">
+            <a class="py-2" href="./index.aspx" aria-label="Product">
+                <span class="iconfont icon-open-book-"></span>
+                CC书店
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="#" >哈哈</a>
+            <a class="py-2 d-none d-md-inline-block" href="#" >呵呵</a>
+            <a class="py-2 d-none d-md-inline-block" href="#" >嘻嘻</a>
+            <a class="py-2 d-none d-md-inline-block" href="Login.aspx?isadmin=true">秘密入口</a>
+        </div>
+    </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    
+    <footer style="background-color:whitesmoke">
+        <div class="container py-5" style="">
+            <div class="row">
+            <div class="col-12 col-md">
+                <span class="iconfont icon-open-book- d-block mb-3 text-muted">&nbsp;&nbsp;&nbsp;CC书店</span>
+                <small class="d-block mb-3 text-muted">© 2017-2020</small>
+            </div>
+
+            <div class="col-6 col-md">
+                <h5>关于我们</h5>
+                <ul class="list-unstyled text-small">
+                <li> <a class="text-muted" href="contact.html">合作伙伴</a></li>
+                <li> <a class="text-muted" href="contact.html">营销中心</a></li>
+                <li> <a class="text-muted" href="contact.html">联系方式</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>加入我们</h5>
+                <ul class="list-unstyled text-small">
+                <li> <a class="text-muted" href="contact.html">诚征英才</a></li>
+                <li> <a class="text-muted" href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>建议投诉</h5>
+                <ul class="list-unstyled text-small">
+                <li> <a class="text-muted" href="contact.html">廉正举报</a></li>
+                <li> <a class="text-muted" href="contact.html">联系客服</a></li>
+                <li> <a class="text-muted" href="contact.html">法律声明</a></li>
+                <li> <a class="text-muted" href="contact.html">知识产权</a></li>
+                </ul>
+            </div>
+            </div>
+            <hr />
+            <div class="pt-3 pb-3" style="text-align:center">©2020 学习笔记 备案号:浙ICP备20008364号-1</div>
+        </div>
+    </footer>
+</body>
+</html>

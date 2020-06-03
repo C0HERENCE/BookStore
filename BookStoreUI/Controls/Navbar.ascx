@@ -1,0 +1,43 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Navbar.ascx.cs" Inherits="BookStoreUI.Controls.Navbar" %>
+<nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
+  <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">CC 书店</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          
+            <li class="nav-item">
+                <a class="nav-link" href="#" >{{item.cata}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" >{{item.cata}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" >{{item.cata}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" >{{item.cata}}</a>
+            </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">更多分类</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown08">
+              <a class="dropdown-item" href="#">{{item.cata}}</a>
+              <a class="dropdown-item" href="#">{{item.cata}}</a>
+              <a class="dropdown-item" href="#">{{item.cata}}</a>
+              <a class="dropdown-item" href="#">{{item.cata}}</a>
+              <a class="dropdown-item" href="#">{{item.cata}}</a>
+            </div>
+          </li>
+        </ul>
+
+        <form class="form-inline float-right">
+            <input class="form-control" type="text" placeholder="全站搜索" aria-label="Search">
+        </form>
+
+    </div>
+  </div>
+</nav>
