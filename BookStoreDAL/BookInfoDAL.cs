@@ -7,7 +7,7 @@ using System.Web;
 
 namespace BookStoreDAL
 {
-    public class BookDAL
+    public class BookInfoDAL
     {
         public static DataTable GetAllBooks(int offset, int size)
         {

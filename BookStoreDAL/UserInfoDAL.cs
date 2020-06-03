@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace BookStoreDAL
 {
-    public class LoginDAL
+    public class UserInfoDAL
     {
         public static int AdminLogin(string name, string pwd)
         {

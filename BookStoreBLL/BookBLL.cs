@@ -28,11 +28,11 @@ namespace BookStoreBLL
         {
             LayUITable table = new LayUITable();
             table.code = 0;
-            table.count = BookDAL.GetBookCount();
+            table.count = BookInfoDAL.GetBookCount();
             if (page == -1 || limit == -1)
-                table.data = BookDAL.GetAllBooks();
+                table.data = BookInfoDAL.GetAllBooks();
             else
-                table.data = BookDAL.GetAllBooks((page - 1) * limit, limit);
+                table.data = BookInfoDAL.GetAllBooks((page - 1) * limit, limit);
             table.msg = "success";
             return JsonConvert.SerializeObject(table);
         }
@@ -40,7 +40,7 @@ namespace BookStoreBLL
         public static string DelBook(int bookid,int delNew)
         {
             LayUIDelBook delBook = new LayUIDelBook();
-            if (BookDAL.DelBook(bookid, delNew) ==1)
+            if (BookInfoDAL.DelBook(bookid, delNew) ==1)
             {
                 delBook.code = 0;
                 delBook.msg = "success";
@@ -80,7 +80,7 @@ namespace BookStoreBLL
 
         public static int GetBookCount()
         {
-            return BookDAL.GetBookCount();
+            return BookInfoDAL.GetBookCount();
         }
     }
 }

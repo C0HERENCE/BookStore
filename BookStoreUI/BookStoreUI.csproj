@@ -420,6 +420,12 @@
     <Compile Include="Public\API\GetAllBooks.ashx.cs">
       <DependentUpon>GetAllBooks.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Public\API\GetPublisher.ashx.cs">
+      <DependentUpon>GetPublisher.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\API\GetAuthor.ashx.cs">
+      <DependentUpon>GetAuthor.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Public\API\GetCategory.ashx.cs">
       <DependentUpon>GetCategory.ashx</DependentUpon>
     </Compile>
@@ -450,6 +456,8 @@
     <Content Include="Public\API\DelBook.ashx" />
     <Content Include="Public\API\GetAllBooks.ashx" />
     <Content Include="Public\API\GetCategory.ashx" />
+    <Content Include="Public\API\GetAuthor.ashx" />
+    <Content Include="Public\API\GetPublisher.ashx" />
     <None Include="Public\CSS\LayUI\font\iconfont.eot" />
     <None Include="Public\CSS\LayUI\font\iconfont.ttf" />
     <None Include="Public\CSS\LayUI\font\iconfont.woff" />

@@ -14,9 +14,9 @@ namespace BookStoreBLL
             pwd = MD5Encrypt.GetMD5(pwd);
             int ans = 0;
             if (isAdmin)
-                ans = LoginDAL.AdminLogin(name, pwd);
+                ans = UserInfoDAL.AdminLogin(name, pwd);
             else
-                ans = LoginDAL.UserLogin(name, pwd);
+                ans = UserInfoDAL.UserLogin(name, pwd);
 
             if (ans == 0)
                 return false;

@@ -15,5 +15,10 @@ namespace BookStoreUI.Controls.Dashboard.BookManageControls
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("www.baidu.com");
+        }
     }
 }
