@@ -24,7 +24,7 @@ namespace BookStore.API
                     bookid = int.Parse(context.Request["bookid"]);
                     delnew = int.Parse(context.Request["delnew"]);
                 }
-                context.Response.Write(BookBLL.DelBook(bookid, delnew));
+                context.Response.Write(BookInfoBLL.DelBook(bookid, delnew));
                 return;
             }
             context.Response.Write("null");

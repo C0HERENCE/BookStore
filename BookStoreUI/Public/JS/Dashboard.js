@@ -203,6 +203,14 @@ function InitializeAddBook() {
             return false;
         });
         $('#selectrole0').ready(getcategory('#selectrole0', 0));
+        $('#autocomplete-author').autocomplete({
+            data: {
+                "Apple": null,
+                "Microsoft": null,
+                "Google": 'https://placehold.it/250x250'
+            },
+        });
+
         form.on('select(selectrole0)', function (data) {
             console.log(data.value);
             if (data.value != "-1") {

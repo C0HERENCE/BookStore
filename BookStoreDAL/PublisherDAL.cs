@@ -5,17 +5,30 @@ using System.Web;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
+using BookStoreMisc;
 
 namespace BookStoreDAL
 {
     public class PublisherDAL
     {
-        public static DataTable GetCategoryRole(int role)
+        public static int InsertPublisher(PublisherModel publisher)
         {
-            return SqlHelper.ExecuteDataTable(
-                "select id,name from category where role=@role",
-                new SqlParameter[] { new SqlParameter("role", role) }
-                );
+            string sql = "insert into publisher values(@name)";
+            return SqlHelper.ExecuteNonQuery(sql, new SqlParameter[]
+            {
+                new SqlParameter("name",publisher.name)
+            });
+        }
+        public static int SelectPublisherCount()
+        {
+            string sql = "select count(*) from publisher";
+            return (int)SqlHelper.ExecuteScalar(sql);
+        }
+
+        public static DataTable SelectAllPublisher()
+        {
+            string sql = "select * from publisher";
+            return SqlHelper.ExecuteDataTable(sql);
         }
     }
 }

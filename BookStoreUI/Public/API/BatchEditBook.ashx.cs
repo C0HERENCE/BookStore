@@ -30,7 +30,7 @@ namespace BookStore.API
                         {
                             ids[i] = int.Parse(strs[i]);
                         }
-                        context.Response.Write(BookBLL.BatchDelBook(ids, newdel));
+                        context.Response.Write(BookInfoBLL.BatchDelBook(ids, newdel));
                         return;
                     }
                 }

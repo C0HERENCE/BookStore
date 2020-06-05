@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace BookStoreUI
 {
-    public partial class Dashboard : System.Web.UI.Page
+    public partial class Dashboard2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

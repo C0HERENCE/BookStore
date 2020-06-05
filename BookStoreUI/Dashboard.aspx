@@ -15,6 +15,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="../Public/CSS/LayUI/css/layui.css" />
+    <link rel="stylesheet" href="../Public/CSS/materialize.css" />
 </head>
 <body class="layui-layout-body">
     <form id="form1" runat="server">
@@ -114,6 +115,7 @@
         
         <script src="../Public/JS/jquery-3.5.1.js"></script>
         <script src="../Public/CSS/LayUI/layui.all.js"></script>
+        <script src="../Public/JS/materialize.js"></script>
         <script src="../Public/JS/Dashboard.js"></script>
     </form>
 </body>

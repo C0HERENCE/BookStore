@@ -61,9 +61,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookBLL.cs" />
+    <Compile Include="BookInfoBLL.cs" />
+    <Compile Include="AuthorBLL.cs" />
+    <Compile Include="PublisherBLL.cs" />
     <Compile Include="CategoryBLL.cs" />
-    <Compile Include="LoginBBL.cs" />
+    <Compile Include="UserInfoBBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

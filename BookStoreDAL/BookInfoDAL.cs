@@ -9,6 +9,15 @@ namespace BookStoreDAL
 {
     public class BookInfoDAL
     {
+        public static int SelectBookCount()
+        {
+            return (int)SqlHelper.ExecuteScalar("select count(*) from bookinfo_line", null);
+        }
+        public static object SelectAllBook()
+        {
+            string sql = "select * from bookinfo_line";
+            return SqlHelper.ExecuteDataTable(sql);
+        }
         public static DataTable GetAllBooks(int offset, int size)
         {
             string sql = "SELECT * FROM book WHERE id IN(SELECT TOP (0+@limit) id FROM book WHERE id NOT IN(SELECT TOP (0+@offset) id FROM book))";
@@ -17,16 +26,13 @@ namespace BookStoreDAL
             param[1] = new SqlParameter("limit", size);
             return SqlHelper.ExecuteDataTable(sql, param);
         }
+
         public static DataTable GetAllBooks()
         {
             string sql = "SELECT * FROM book";
             return SqlHelper.ExecuteDataTable(sql, null);
         }
 
-        public static int GetBookCount()
-        {
-            return (int)SqlHelper.ExecuteScalar("select count(*) from book", null);
-        }
 
         public static int DelBook(int bookid, int del)
         {

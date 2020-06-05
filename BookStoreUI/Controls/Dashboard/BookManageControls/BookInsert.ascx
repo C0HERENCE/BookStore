@@ -47,13 +47,20 @@
     <div class="layui-form-item pane">
         <label class="layui-form-label">出版社</label>
         <div class="layui-input-inline">
-            <select id="publisher" name="publisherid" lay-filter="publisher" lay-search>
-            </select>
+            <input type="text" id="txtpublisher" name="publisherid" placeholder="查询出版社" autocomplete="off" class="layui-input">
+                <div style="display:none;:absolute;top:35px;width:100%;z-index:999;" class="layui-anim layui-anim-upbit layui-transfer-box">
+                    <ul class="layui-transfer-data">
+                        <li>ffff</li>
+                        <li>ffff</li>
+                        <li>ffff</li>
+                        <li>ffff</li>
+                        <li>ffff</li>
+                    </ul>
+                </div>
         </div>
         <label class="layui-form-label">作者</label>
         <div class="layui-input-inline">
-            <select id="publisher" lay-filter="publisher" lay-search>
-            </select>
+            <input type="text" id="autocomplete-author" name="authorid" placeholder="查询作者" autocomplete="off" class="layui-input">
         </div>
     </div>
     <%--基本信息--%>

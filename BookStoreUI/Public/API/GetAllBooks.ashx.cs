@@ -24,7 +24,7 @@ namespace BookStore.API
                     page = int.Parse(context.Request["page"]);
                     limit = int.Parse(context.Request["limit"]);
                 }
-                context.Response.Write(BookBLL.GetAllBooks(page, limit));
+                context.Response.Write(BookInfoBLL.GetAllBooks(page, limit));
                 return;
             }
             context.Response.Write("null");

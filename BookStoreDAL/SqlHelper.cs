@@ -44,6 +44,21 @@ namespace BookStoreDAL
                 }
             }
         }
+        public static DataTable ExecuteDataTable(string sqlStr)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
         public static object ExecuteScalar(string sqlStr, SqlParameter[] param)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -54,6 +69,17 @@ namespace BookStoreDAL
                     {
                         cmd.Parameters.AddRange(param);
                     }
+                    conn.Open();
+                    return cmd.ExecuteScalar();
+                }
+            }
+        }
+        public static object ExecuteScalar(string sqlStr)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                {
                     conn.Open();
                     return cmd.ExecuteScalar();
                 }
