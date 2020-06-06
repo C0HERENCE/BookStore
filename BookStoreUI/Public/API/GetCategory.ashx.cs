@@ -22,7 +22,7 @@ namespace BookStoreUI.Public.API
                 {
                     role = int.Parse(context.Request["role"]);
                 }
-                context.Response.Write(BookStoreBLL.CategoryBLL.GetCategory(role));
+                context.Response.Write(BookStoreBLL.CategoryBLL.GetCategoryByRole(role));
                 return;
             }
             context.Response.Write("null");

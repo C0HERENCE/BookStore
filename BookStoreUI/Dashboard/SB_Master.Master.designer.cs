@@ -24,13 +24,13 @@ namespace Dashboard
         protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
 
         /// <summary>
-        /// ContentPlaceHolder4 control.
+        /// StylePlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder4;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder StylePlaceHolder;
 
         /// <summary>
         /// form1 control.
@@ -42,30 +42,30 @@ namespace Dashboard
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// TitlePlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder TitlePlaceHolder;
 
         /// <summary>
-        /// ContentPlaceHolder2 control.
+        /// MainContentPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContentPlaceHolder;
 
         /// <summary>
-        /// ContentPlaceHolder3 control.
+        /// ScriptPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder3;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ScriptPlaceHolder;
     }
 }

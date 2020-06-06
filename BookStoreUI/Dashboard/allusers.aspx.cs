@@ -11,7 +11,17 @@ namespace Dashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Write(GridView1.ClientID+"xxxxxxxxxxxx");
+            List<int> ss = new List<int>();
+            ss.Add(2);
+            ss.Add(3);
+            GridView1.DataSource = ss;
+            GridView1.DataBind();
+        }
 
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int a = 2;
         }
     }
 }

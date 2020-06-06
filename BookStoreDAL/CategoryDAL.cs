@@ -10,9 +10,9 @@ namespace BookStoreDAL
 {
     public class CategoryDAL
     {
-        public static DataTable GetCategoryRole(int role)
+        public static SqlDataReader SelectCategoryByRole(int role)
         {
-            return SqlHelper.ExecuteDataTable(
+            return SqlHelper.ExecuteDataReader(
                 "select id,name from category where role=@role",
                 new SqlParameter[] { new SqlParameter("role", role) }
                 );

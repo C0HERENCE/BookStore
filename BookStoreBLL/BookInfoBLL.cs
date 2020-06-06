@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using BookStoreDAL;
+using BookStoreMisc;
 using Newtonsoft.Json;
 
 namespace BookStoreBLL
@@ -18,6 +19,16 @@ namespace BookStoreBLL
         public static int GetBookCount()
         {
             return BookInfoDAL.SelectBookCount();
+        }
+
+        public static string AddBook(BookInfoModel book)
+        {
+            string msg = "图书添加失败";
+            if (BookInfoDAL.InsertBook(book)==1)
+            {
+                msg = "图书添加成功";
+            }
+            return msg;
         }
         public class LayUITable
         {

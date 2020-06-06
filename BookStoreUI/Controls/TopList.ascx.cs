@@ -14,8 +14,8 @@ namespace BookStoreUI.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BookModel[] books = new BookModel[5];
-            foreach (BookModel book in books)
+            BookInfoModel[] books = new BookInfoModel[5];
+            foreach (BookInfoModel book in books)
             {
                 TopListElement control = (TopListElement)LoadControl("~/Controls/Element/TopListElement.ascx");
                 

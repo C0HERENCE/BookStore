@@ -8,9 +8,15 @@ namespace BookStoreBLL
 {
     public class CategoryBLL
     {
-        static public string GetCategory(int role)
+        static public Dictionary<int,string> GetCategoryByRole(int role)
         {
-            return JsonConvert.SerializeObject(BookStoreDAL.CategoryDAL.GetCategoryRole(role));
+            Dictionary<int, string> dict = new Dictionary<int, string>();
+            var reader = BookStoreDAL.CategoryDAL.SelectCategoryByRole(role);
+            while (reader.Read())
+            {
+                dict.Add(reader.GetInt32(0), reader.GetString(1));
+            }
+            return dict;
         }
     }
 }

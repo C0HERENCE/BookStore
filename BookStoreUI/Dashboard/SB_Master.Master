@@ -16,7 +16,10 @@
         rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <asp:ContentPlaceHolder ID="StylePlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body id="page-top">
@@ -47,7 +50,7 @@
                 商品信息
             </div>
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item"><a class="nav-link collapsed" href="#" data-toggle="collapse"
+            <li id="navitem1" class="nav-item"><a class="nav-link collapsed" href="#" data-toggle="collapse"
                 data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><i class="fas fa-fw fa-cog">
                 </i><span>图书管理</span> </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -76,7 +79,7 @@
                 用户信息
             </div>
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item"><a class="nav-link collapsed" href="#" data-toggle="collapse"
+            <li id="navitem2" class="nav-item"><a class="nav-link collapsed" href="#" data-toggle="collapse"
                 data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                 <i class="fas fa-fw fa-folder"></i><span>用户管理</span> </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -97,7 +100,7 @@
             <div class="sidebar-heading">
                 销售信息
             </div>
-            <li class="nav-item"><a class="nav-link collapsed" href="#" data-toggle="collapse"
+            <li id="navitem3" class="nav-item"><a class="nav-link collapsed" href="#" data-toggle="collapse"
                 data-target="#collapaseOrders" aria-expanded="true" aria-controls="collapaseOrders">
                 <i class="fas fa-fw fa-folder"></i><span>交易管理</span> </a>
                 <div id="collapaseOrders" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -223,11 +226,11 @@
                 <div class="container-fluid">
                     <div class="d-sm-flex align-items-center justify-content-between mb-1">
                         <h1 class="h3 mb-0 text-gray-800">
-                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server">
                             </asp:ContentPlaceHolder>
                         </h1>
                     </div>
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
             </div>
@@ -271,14 +274,11 @@
         </div>
     </div>
     </form>
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+    <asp:ContentPlaceHolder ID="ScriptPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 </body>
 </html>

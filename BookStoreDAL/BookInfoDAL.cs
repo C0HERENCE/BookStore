@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-
+using BookStoreMisc;
 namespace BookStoreDAL
 {
     public class BookInfoDAL
@@ -17,6 +17,25 @@ namespace BookStoreDAL
         {
             string sql = "select * from bookinfo_line";
             return SqlHelper.ExecuteDataTable(sql);
+        }
+        public static int InsertBook(BookInfoModel book)
+        {
+            string sql = "insert into bookinfo values(@isbn,@title,@origintitle,@subtitle,@image,@author_id,@category_id,@publisher_id,@pubdate,@pages,@price,@summary,@catalog)";
+            return SqlHelper.ExecuteNonQuery(sql, new SqlParameter[] {
+                new SqlParameter("@isbn",book.isbn),
+                new SqlParameter("@title",book.title),
+                new SqlParameter("@origintitle",book.origintitle),
+                new SqlParameter("@subtitle",book.subtitle),
+                new SqlParameter("@image",book.image),
+                new SqlParameter("@author_id",book.author_id),
+                new SqlParameter("@category_id",book.category_id),
+                new SqlParameter("@publisher_id",book.publisher_id),
+                new SqlParameter("@pubdate",book.pubdate),
+                new SqlParameter("@pages",book.pages),
+                new SqlParameter("@price",book.price),
+                new SqlParameter("@summary",book.summary),
+                new SqlParameter("@catalog",book.catalog),
+            });
         }
         public static DataTable GetAllBooks(int offset, int size)
         {

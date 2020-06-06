@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard/SB_Master.Master" AutoEventWireup="true" CodeBehind="allbooks.aspx.cs" Inherits="Dashboard.allbooks" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="TitlePlaceHolder" runat="server">
 图书管理
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <div class="row">
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-success shadow h-100 py-2">
@@ -73,10 +73,10 @@
         </div>
     </div>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+<asp:Content ID="Content3" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
+    <script src="vendor/datatables/datatables.js"></script>
     <script type="text/javascript">
+        $('[href="allbooks.aspx"]').addClass('active').parent().parent().collapse('show').parent().addClass('active')
         /* Formatting function for row details - modify as you need */
         function format(d) {
             // `d` is the original data object for the row
@@ -149,7 +149,8 @@
         });
     </script>
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
+<asp:Content ID="Content4" ContentPlaceHolderID="StylePlaceHolder" runat="server">
+    <link rel="stylesheet" type="text/css" href="vendor/datatables/datatables.css"/>
     <style type="text/css">
         td.details-control {
             background: url('resources/details_open.png') no-repeat center center;

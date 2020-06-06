@@ -17,7 +17,7 @@ namespace BookStoreUI.Controls.Element
             
         }
 
-        public void SetBook(BookModel book)
+        public void SetBook(BookInfoModel book)
         {
             Label1.Text = Panel1.ClientID;
             Label2.Text = "Bookname";

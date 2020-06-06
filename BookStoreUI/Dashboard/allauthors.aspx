@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard/SB_Master.Master" AutoEventWireup="true" CodeBehind="allauthors.aspx.cs" Inherits="Dashboard.allauthors" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="TitlePlaceHolder" runat="server">
 作者和出版社管理
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <div class="row">
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
@@ -128,10 +128,10 @@
         </div>
     </div>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<asp:Content ID="Content3" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
+    <script src="vendor/datatables/datatables.js"></script>
     <script type="text/javascript">
+        $('[href="allauthors.aspx"]').addClass('active').parent().parent().collapse('show').parent().addClass('active')
         $(document).ready(function () {
             $('#authortable').DataTable({
                 "ajax": {
@@ -157,4 +157,8 @@
             });
         });
     </script>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="StylePlaceHolder" runat="server">
+    <link rel="stylesheet" type="text/css" href="vendor/datatables/datatables.css"/>
 </asp:Content>
