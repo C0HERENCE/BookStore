@@ -30,5 +30,13 @@ namespace BookStoreDAL
             string sql = "select * from publisher";
             return SqlHelper.ExecuteDataTable(sql);
         }
+
+        public static object SelectPublisherIDByName(string name)
+        {
+            string sql = "select id from publisher where name=@name";
+            return SqlHelper.ExecuteScalar(sql, new SqlParameter[] {
+                new SqlParameter("name",name)
+            });
+        }
     }
 }

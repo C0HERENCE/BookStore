@@ -45,12 +45,20 @@
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">新增作者</h6>
                 </div>
+
                 <div class="card-body">
-                    <asp:TextBox ID="TextBox1" runat="server" autocomplete="off"></asp:TextBox>
-                    <p />
-                    <asp:TextBox ID="TextBox2" runat="server" autocomplete="off"></asp:TextBox>
-                    <p />
-                    <asp:Button ID="Button1" runat="server" Text="添加" OnClick="Button1_Click"/>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validationTooltip01">作者名</label><p />
+                            <asp:TextBox ID="TextBox1" runat="server" autocomplete="off" class="form-control" placeholder="请输入作者名"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" style="font-size:80%;color:crimson" CssClass="p-2" ControlToValidate="TextBox1" ErrorMessage="作者名为必填项" ValidationGroup="author"></asp:RequiredFieldValidator>
+                            <p />
+                            <label for="validationTooltip01">详情介绍</label><p />
+                            <asp:TextBox ID="TextBox2" runat="server" autocomplete="off" TextMode="MultiLine" class="form-control" Height="200px" placeholder="请输入作者详情"></asp:TextBox>
+                            <p />
+                            <asp:Button ID="Button1" runat="server" Text="添加" OnClick="Button1_Click" CssClass="btn btn-primary" ValidationGroup="author"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,9 +68,10 @@
                     <h6 class="m-0 font-weight-bold text-primary">新增出版社</h6>
                 </div>
                 <div class="card-body">
-                    <asp:TextBox ID="TextBox3" runat="server" autocomplete="off"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" runat="server" autocomplete="off" class="form-control" placeholder="请输入出版社名"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" style="font-size:80%;color:crimson" CssClass="p-2" ControlToValidate="TextBox3" ErrorMessage="出版社名称为必填项" ValidationGroup="press"></asp:RequiredFieldValidator>
                     <p />
-                    <asp:Button ID="Button2" runat="server" Text="添加" OnClick="Button2_Click" />
+                    <asp:Button ID="Button2" runat="server" Text="添加" OnClick="Button2_Click" CssClass="btn btn-primary" ValidationGroup="press" />
                 </div>
             </div>
         </div>
@@ -75,7 +84,7 @@
                     <h6 class="m-0 font-weight-bold text-primary">作者管理</h6>
                 </a>
             <!-- Card Content - Collapse -->
-                <div class="collapse" id="collapseauthor">
+                <div class="collapse show" id="collapseauthor">
                     <div class="card-body">
                         <table id="authortable" class="table table-bordered dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
                             <thead>
@@ -106,9 +115,9 @@
                     <h6 class="m-0 font-weight-bold text-primary">出版社管理</h6>
                 </a>
             <!-- Card Content - Collapse -->
-                <div class="collapse" id="collapspublisher">
+                <div class="collapse show" id="collapspublisher">
                     <div class="card-body">
-                        <table id="publishertable" class="table table-bordered dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                        <table id="publishertable" class="table table-bordered dataTable" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
                             <thead>
                                 <tr>
                                     <th>ID</th>

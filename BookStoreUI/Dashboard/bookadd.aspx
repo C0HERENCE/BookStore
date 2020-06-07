@@ -42,7 +42,6 @@
             <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-control" >
             </asp:DropDownList>
         </div>
-        
     </div>
     <div class="form-row">
         <div class="col-md-4 mb-3">

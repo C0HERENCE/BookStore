@@ -63,8 +63,8 @@
                         <a class="collapse-item" href="allauthors.aspx">作者和出版社</a>
                         <h6 class="collapse-header">
                             管理商品的库存,售价和状态：</h6>
-                        <a class="collapse-item" href="bookdetail.aspx">商品详情页</a>
                         <a class="collapse-item" href="bookstock.aspx">商品管理</a>
+                        <a class="collapse-item" href="bookdetail.aspx">商品详情页</a>
                         <a class="collapse-item" href="booksettings.aspx">优惠设置</a>
                     </div>
                 </div>

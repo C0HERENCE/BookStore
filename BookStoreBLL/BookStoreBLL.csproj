@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="BookInfoBLL.cs" />
     <Compile Include="AuthorBLL.cs" />
+    <Compile Include="BookStatBLL.cs" />
     <Compile Include="PublisherBLL.cs" />
     <Compile Include="CategoryBLL.cs" />
     <Compile Include="UserInfoBBL.cs" />

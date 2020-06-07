@@ -29,5 +29,19 @@ namespace BookStoreBLL
         {
             return JsonConvert.SerializeObject(PublisherDAL.SelectAllPublisher());
         }
+
+        static public int GetPublisherIDByname(string name)
+        {
+            object id = PublisherDAL.SelectPublisherIDByName(name);
+            if (id != null) 
+            {
+                id = (int)id;
+            }
+            else
+            {
+                id = -1;
+            }
+            return (int)id;
+        }
     }
 }

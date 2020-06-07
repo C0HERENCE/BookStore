@@ -123,6 +123,43 @@
     <Content Include="Dashboard\vendor\chart.js\Chart.bundle.min.js" />
     <Content Include="Dashboard\vendor\chart.js\Chart.js" />
     <Content Include="Dashboard\vendor\chart.js\Chart.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Bootstrap-4-4.1.1\css\bootstrap.css" />
+    <Content Include="Dashboard\vendor\datatables\Bootstrap-4-4.1.1\css\bootstrap.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Bootstrap-4-4.1.1\js\bootstrap.js" />
+    <Content Include="Dashboard\vendor\datatables\Bootstrap-4-4.1.1\js\bootstrap.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.bootstrap.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.bootstrap.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.bootstrap4.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.bootstrap4.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.dataTables.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.dataTables.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.foundation.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.foundation.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.jqueryui.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.jqueryui.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.semanticui.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\buttons.semanticui.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.bootstrap.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.bootstrap.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.bootstrap4.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.bootstrap4.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.colVis.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.colVis.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.flash.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.flash.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.foundation.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.foundation.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.html5.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.html5.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.jqueryui.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.jqueryui.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.print.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.print.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.semanticui.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\buttons.semanticui.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\dataTables.buttons.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\js\dataTables.buttons.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\swf\flashExport.swf" />
     <Content Include="Dashboard\vendor\datatables\DataTables-1.10.21\css\dataTables.bootstrap.css" />
     <Content Include="Dashboard\vendor\datatables\DataTables-1.10.21\css\dataTables.bootstrap.min.css" />
     <Content Include="Dashboard\vendor\datatables\DataTables-1.10.21\css\dataTables.bootstrap4.css" />
@@ -156,6 +193,11 @@
     <Content Include="Dashboard\vendor\datatables\datatables.js" />
     <Content Include="Dashboard\vendor\datatables\datatables.min.css" />
     <Content Include="Dashboard\vendor\datatables\datatables.min.js" />
+    <Content Include="Dashboard\vendor\datatables\JSZip-2.5.0\jszip.js" />
+    <Content Include="Dashboard\vendor\datatables\JSZip-2.5.0\jszip.min.js" />
+    <Content Include="Dashboard\vendor\datatables\pdfmake-0.1.36\pdfmake.js" />
+    <Content Include="Dashboard\vendor\datatables\pdfmake-0.1.36\pdfmake.min.js" />
+    <Content Include="Dashboard\vendor\datatables\pdfmake-0.1.36\vfs_fonts.js" />
     <Content Include="Dashboard\vendor\datatables\Select-1.3.1\css\select.bootstrap.css" />
     <Content Include="Dashboard\vendor\datatables\Select-1.3.1\css\select.bootstrap.min.css" />
     <Content Include="Dashboard\vendor\datatables\Select-1.3.1\css\select.bootstrap4.css" />
@@ -181,6 +223,32 @@
     <Content Include="Dashboard\vendor\datatables\Select-1.3.1\js\select.jqueryui.min.js" />
     <Content Include="Dashboard\vendor\datatables\Select-1.3.1\js\select.semanticui.js" />
     <Content Include="Dashboard\vendor\datatables\Select-1.3.1\js\select.semanticui.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.bootstrap.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.bootstrap.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.bootstrap4.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.bootstrap4.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.dataTables.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.dataTables.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.foundation.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.foundation.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.jqueryui.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.jqueryui.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.semanticui.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\editor.semanticui.min.css" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\dataTables.editor.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\dataTables.editor.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\dataTables.editor2.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\editor.bootstrap.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\editor.bootstrap.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\editor.bootstrap4.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\editor.bootstrap4.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\editor.foundation.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\editor.foundation.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\editor.jqueryui.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\editor.jqueryui.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\editor.semanticui.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\js\editor.semanticui.min.js" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\Readme.txt" />
     <Content Include="Dashboard\vendor\fontawesome-free\css\all.css" />
     <Content Include="Dashboard\vendor\fontawesome-free\css\all.min.css" />
     <Content Include="Dashboard\vendor\fontawesome-free\css\brands.css" />
@@ -1761,7 +1829,13 @@
     <Content Include="Dashboard\vendor\jquery\jquery.min.js" />
     <Content Include="Dashboard\vendor\jquery\jquery.slim.js" />
     <Content Include="Dashboard\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Dashboard\vendor\dataTables.cellEdit.js" />
+    <Content Include="Developer\cate3.txt" />
+    <Content Include="Developer\data.txt" />
+    <Content Include="Developer\datas3.txt" />
+    <Content Include="Developer\HtmlPage1.html" />
     <Content Include="Developer\ISBN.aspx" />
+    <Content Include="Developer\data2.txt" />
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Public\CSS\bootstrap.css" />
@@ -2088,6 +2162,12 @@
     <Compile Include="Dashboard\api\getallpublisher.ashx.cs">
       <DependentUpon>getallpublisher.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\api\getallsells.ashx.cs">
+      <DependentUpon>getallsells.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\api\togglebookonsale.ashx.cs">
+      <DependentUpon>togglebookonsale.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\bookadd.aspx.cs">
       <DependentUpon>bookadd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2180,6 +2260,7 @@
       <DependentUpon>userdetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Developer\Class1.cs" />
+    <Content Include="Developer\Class2.txt" />
     <Compile Include="Developer\ISBN.aspx.cs">
       <DependentUpon>ISBN.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2411,12 +2492,30 @@
     <Content Include="Dashboard\api\getallauthor.ashx" />
     <Content Include="Dashboard\api\getallpublisher.ashx" />
     <Content Include="Dashboard\api\getallbook.ashx" />
+    <Content Include="Dashboard\api\getallsells.ashx" />
+    <Content Include="Dashboard\vendor\datatables\Bootstrap-4-4.1.1\css\bootstrap.css.map" />
+    <Content Include="Dashboard\vendor\datatables\Bootstrap-4-4.1.1\css\bootstrap.min.css.map" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\common.scss" />
+    <Content Include="Dashboard\vendor\datatables\Buttons-1.6.2\css\mixins.scss" />
+    <Content Include="Dashboard\api\togglebookonsale.ashx" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\bubble.scss" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\datatable.scss" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\datetime.scss" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\envelope.scss" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\fields.scss" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\inline.scss" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\lightbox.scss" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\main.scss" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\mixins.scss" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\processing.scss" />
+    <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\upload.scss" />
     <None Include="Public\CSS\LayUI\font\iconfont.eot" />
     <None Include="Public\CSS\LayUI\font\iconfont.ttf" />
     <None Include="Public\CSS\LayUI\font\iconfont.woff" />
     <None Include="Public\CSS\LayUI\font\iconfont.woff2" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Dashboard\vendor\js\" />
     <Folder Include="Public\Fonts\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

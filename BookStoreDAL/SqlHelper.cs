@@ -14,15 +14,32 @@ namespace BookStoreDAL
 
         public static int ExecuteNonQuery(string sqlStr, SqlParameter[] param)
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
+            SqlConnection conn = new SqlConnection(connStr);
+            SqlCommand cmd = new SqlCommand(sqlStr, conn);
+            cmd.Parameters.AddRange(param);
+            conn.Open();
+            try
             {
-                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
-                {
-                    cmd.Parameters.AddRange(param);
-                    conn.Open();
-                    return cmd.ExecuteNonQuery();
-                }
+
+            int s = cmd.ExecuteNonQuery();
+                conn.Close();
+                return s;
             }
+            catch (Exception ee)
+            {
+                string s = ee.Message;
+                int a = 3;
+                throw;
+            }
+            //using (SqlConnection conn = new SqlConnection(connStr))
+            //{
+            //    using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+            //    {
+            //        cmd.Parameters.AddRange(param);
+            //        conn.Open();
+            //        return cmd.ExecuteNonQuery();
+            //    }
+            //}
         }
 
         public static DataTable ExecuteDataTable(string sqlStr, SqlParameter[] param)

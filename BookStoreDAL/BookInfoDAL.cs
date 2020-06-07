@@ -11,11 +11,11 @@ namespace BookStoreDAL
     {
         public static int SelectBookCount()
         {
-            return (int)SqlHelper.ExecuteScalar("select count(*) from bookinfo_line", null);
+            return (int)SqlHelper.ExecuteScalar("select count(*) from bookinfo_full", null);
         }
         public static object SelectAllBook()
         {
-            string sql = "select * from bookinfo_line";
+            string sql = "select * from bookinfo_full";
             return SqlHelper.ExecuteDataTable(sql);
         }
         public static int InsertBook(BookInfoModel book)

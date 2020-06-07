@@ -12,6 +12,7 @@
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" Text="添加" onclick="Button1_Click" />
         <asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="Button" />
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Button" />
         <br />
         <br />
         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" 

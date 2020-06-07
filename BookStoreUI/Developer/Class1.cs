@@ -14,19 +14,25 @@ namespace ppll
 
         public static int ExecuteNonQuery(string sqlStr, SqlParameter[] paras)
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                SqlConnection conn = new SqlConnection(connStr);
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                if (paras != null)
                 {
-                    if (paras != null)
-                    {
-                        cmd.Parameters.AddRange(paras);
-                    }
-                    conn.Open();
-                    return cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddRange(paras);
                 }
+                conn.Open();
+                return cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                int a = 2;
+                return 0;
             }
         }
+
 
         public static DataTable ExecuteDataTable(string sqlStr, SqlParameter[] paras)
         {

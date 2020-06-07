@@ -24,7 +24,7 @@ namespace BookStoreBLL
         public static string AddBook(BookInfoModel book)
         {
             string msg = "图书添加失败";
-            if (BookInfoDAL.InsertBook(book)==1)
+            if (BookInfoDAL.InsertBook(book) > 0) 
             {
                 msg = "图书添加成功";
             }
