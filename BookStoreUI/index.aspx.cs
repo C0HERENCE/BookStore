@@ -12,10 +12,12 @@ namespace BookStoreUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BookRow.SetTitle("Biaoti", "di");
-            BookRow.SetBooks(BookStatBLL.GetNewestBooks(5));
-            BookRow1.SetTitle("Biaoti", "di");
-            BookRow2.SetTitle("Biaoti", "di");
+            LatestBooksRow.SetTitle("最近更新", "Latest Books");
+            LatestBooksRow.SetBooks(BookStatBLL.GetNewestBooks(5));
+            BestSellersRow.SetTitle("当前热销", "Current Bestsellers");
+            BestSellersRow.SetBooks(BookStatBLL.GetHighestStarsBooks(5));
+            TopRatedBooksRow.SetTitle("评分最高","Top Rated Books");
+            TopRatedBooksRow.SetBooks(BookStatBLL.GetHighestStarsBooks(5));
         }
     }
 }

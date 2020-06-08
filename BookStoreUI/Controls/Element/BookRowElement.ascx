@@ -2,7 +2,7 @@
 <li class="itemInCovers">
     <div class="bookrowele">
         <div class="card shadow">
-        <asp:Image ID="imgCover" runat="server" CssClass="card-img-top" ImageUrl="~/UI/Public/Images/selling1.jpg"/>
+        <asp:Image ID="imgCover" runat="server" CssClass="card-img-top" ImageUrl="~/Public/Images/Cover/s1011204.jpg"/>
             <div class="card-body">
                 <h5 class="card-title font-weight-bold">《
                     <asp:Label ID="txtBookTitle" runat="server" Text="bookTitle"></asp:Label>

@@ -15,15 +15,6 @@ namespace BookStoreUI.Controls
     {
 
         /// <summary>
-        /// BookRowElement7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BookStoreUI.Controls.Element.BookRowElement BookRowElement7;
-
-        /// <summary>
         /// txtName control.
         /// </summary>
         /// <remarks>

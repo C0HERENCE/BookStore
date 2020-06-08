@@ -18,9 +18,9 @@
                 <uc1:TopList runat="server" ID="TopList" NameTefst="D" />
             </div>
             <div class="col-sm-12 col-xl-9">
-                <uc1:BookRow runat="server" ID="BookRow" />
-                <uc1:BookRow runat="server" ID="BookRow1" />
-                <uc1:BookRow runat="server" ID="BookRow2" />
+                <uc1:BookRow runat="server" ID="LatestBooksRow" />
+                <uc1:BookRow runat="server" ID="BestSellersRow" />
+                <uc1:BookRow runat="server" ID="TopRatedBooksRow" />
             </div>
         </div>
 

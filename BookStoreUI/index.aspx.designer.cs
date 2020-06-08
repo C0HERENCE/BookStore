@@ -60,30 +60,30 @@ namespace BookStoreUI
         protected global::BookStoreUI.Controls.TopList TopList;
 
         /// <summary>
-        /// BookRow control.
+        /// LatestBooksRow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.BookRow BookRow;
+        protected global::BookStoreUI.Controls.BookRow LatestBooksRow;
 
         /// <summary>
-        /// BookRow1 control.
+        /// BestSellersRow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.BookRow BookRow1;
+        protected global::BookStoreUI.Controls.BookRow BestSellersRow;
 
         /// <summary>
-        /// BookRow2 control.
+        /// TopRatedBooksRow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.BookRow BookRow2;
+        protected global::BookStoreUI.Controls.BookRow TopRatedBooksRow;
     }
 }

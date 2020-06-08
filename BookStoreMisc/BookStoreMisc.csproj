@@ -60,6 +60,7 @@
     <Compile Include="AuthorModel.cs" />
     <Compile Include="BookInfoModel.cs" />
     <Compile Include="BookStatModel.cs" />
+    <Compile Include="MailValidation.cs" />
     <Compile Include="MD5Encrypt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublisherModel.cs" />

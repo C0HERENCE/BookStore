@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BookStoreMisc;
 
 namespace BookStoreUI
 {
@@ -25,9 +26,13 @@ namespace BookStoreUI
             Response.Write("<script>alert('nihao')</script>");
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        string msgCode="";
+
+        protected void btnSendMail_Click(object sender, EventArgs e)
         {
-            Response.Write("<script>alert('nihao')</script>");
+            Random random = new Random();
+            msgCode = random.Next(0, 9999).ToString("0000");
+            MailValidation.SendValidation(txtMail.Text, msgCode);
         }
     }
 }
