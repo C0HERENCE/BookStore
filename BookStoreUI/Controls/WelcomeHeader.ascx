@@ -3,7 +3,7 @@
 
 <div class="jumbotron" style="margin-bottom: 0px;">
     <div class="container">
-        <h2 class="display-4"><asp:Label ID="Label1" runat="server" Text="欢迎来到CC书店！"></asp:Label>
+        <h2 class="display-5"><asp:Label ID="txtGreeting" runat="server" Text="欢迎来到CC书店！"></asp:Label>
         </h2>
         <asp:Panel ID="Panel1" runat="server">
             <p class="lead">

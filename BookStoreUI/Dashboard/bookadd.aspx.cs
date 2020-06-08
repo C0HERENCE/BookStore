@@ -15,7 +15,7 @@ namespace Dashboard
         {
             if (!IsPostBack)
             {
-                DropDownList1.DataSource = CategoryBLL.GetCategoryByRole(0);
+                DropDownList1.DataSource = CategoryBLL.GetCategoryDictByRole(0);
                 DropDownList1.DataValueField = "key";
                 DropDownList1.DataTextField = "value";
                 DropDownList1.DataBind();
@@ -24,7 +24,7 @@ namespace Dashboard
         }
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DropDownList2.DataSource = CategoryBLL.GetCategoryByRole(int.Parse(DropDownList1.SelectedValue));
+            DropDownList2.DataSource = CategoryBLL.GetCategoryDictByRole(int.Parse(DropDownList1.SelectedValue));
             DropDownList2.DataValueField = "key";
             DropDownList2.DataTextField = "value";
             DropDownList2.DataBind();

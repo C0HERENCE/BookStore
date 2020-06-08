@@ -35,9 +35,18 @@ namespace BookStoreDAL
             });
         }
 
+        public static int SelectUserIDByName(string name)
+        {
+            string sql = "select id from userinfo where username=@name";
+            return (int)SqlHelper.ExecuteScalar(sql, new SqlParameter[]
+            {
+                new SqlParameter("name",name)
+            });
+        }
+
         public static int SelectUserCountByName(string name)
         {
-            string sql = "select count(*) from userinfo where name=@name";
+            string sql = "select count(*) from userinfo where username=@name";
             return (int)SqlHelper.ExecuteScalar(sql, new SqlParameter[]
             {
                 new SqlParameter("name",name)

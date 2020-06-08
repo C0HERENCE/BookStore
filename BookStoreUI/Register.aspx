@@ -1,7 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="Masters/Main.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="BookStoreUI.Register" %>
 
+<%@ Register Src="~/Controls/Modal.ascx" TagPrefix="uc1" TagName="Modal" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Panel ID="Panel1" runat="server" CssClass="register1">
+    <asp:Panel ID="panelStep1" runat="server" CssClass="register1">
     <div class="card bg-light">
         <article class="card-body mx-auto" style="width: 400px;">
             <h4 class="card-title mt-3 text-center">创建一个新账户</h4>
@@ -21,14 +24,21 @@
                     ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
                     ControlToValidate="txtMail"
                     style="font-size:80%;color:crimson"
-                    ValidationGroup="step1"
+                    ValidationGroup="send"
                     Display="Dynamic" >
                 </asp:RegularExpressionValidator>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                     style="font-size:80%;color:crimson"
                     ControlToValidate="txtMail"
                     ErrorMessage="请填写此项"
-                    ValidationGroup="step1"
+                    ValidationGroup="send"
+                    Display="Dynamic" >
+                </asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                    style="font-size:80%;color:crimson"
+                    ControlToValidate="txtMail"
+                    ErrorMessage="请填写此项"
+                    ValidationGroup="nextstep"
                     Display="Dynamic" >
                 </asp:RequiredFieldValidator>
             </div>
@@ -37,16 +47,25 @@
                     <span class="input-group-text"> <span class="icon iconfont icon-shouji"></span></span>
                 </div>
                 <asp:TextBox ID="txtMail" runat="server" type="mail" autocomplete="off" Text="" CssClass="form-control"  placeholder="邮箱地址"></asp:TextBox>
-                <asp:Button ID="btnSend" runat="server" Text="发送验证码" CssClass="btn btn-primary" OnClick="btnSendMail_Click" ValidationGroup="step1"/>
+                <asp:Button ID="btnSend" runat="server" Text="发送验证码" CssClass="btn btn-primary" OnClick="btnSendMail_Click" ValidationGroup="send"/>
+            </div>
+            <div>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                    style="font-size:80%;color:crimson"
+                    ControlToValidate="txtCode"
+                    ErrorMessage="请填写此项"
+                    ValidationGroup="nextstep"
+                    Display="Dynamic" >
+                </asp:RequiredFieldValidator>
             </div>
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon iconfont icon-mima"></span> </span>
                 </div>
-                <asp:TextBox ID="txtCode" runat="server" Text="" CssClass="form-control"  placeholder="输入6位验证码"></asp:TextBox>
+                <asp:TextBox ID="txtCode" runat="server" Text="" CssClass="form-control" autocomplete="off" placeholder="输入6位验证码"></asp:TextBox>
             </div>
             <div class="form-group">
-                <asp:button ID="btnNext" runat="server" type="submit" class="btn btn-primary btn-block" Text="下一步" OnClick="Unnamed2_Click"></asp:button>
+                <asp:button ID="btnNext" runat="server" class="btn btn-primary btn-block" Text="下一步" OnClick="NextStep_Click" ValidationGroup="nextstep"></asp:button>
             </div>
           
             <p class="text-center">已有账号？
@@ -57,45 +76,82 @@
     </div>
 </asp:Panel>
 
-<asp:Panel ID="Panel2" runat="server" CssClass="register2" Visible="false">
+<asp:Panel ID="panelStep2" runat="server" CssClass="register2" Visible="false">
     <div class="card bg-light">
         <article class="card-body mx-auto" style="width: 400px;">
             <h4 class="card-title mt-3 text-center">创建一个新账户</h4>
             <p class="divider-text">
                 <span class="bg-light">完善以下信息</span>
             </p>
-
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><span class="icon iconfont icon-mima"></span> </span>
+                </div>
+                <asp:TextBox ID="txtMailReg" runat="server" Text="" CssClass="form-control" autocomplete="off" placeholder="输入6位验证码" ReadOnly="true"></asp:TextBox>
+            </div>
+            <div>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                    style="font-size:80%;color:crimson"
+                    ControlToValidate="txtUserName"
+                    ErrorMessage="请输入用户名"
+                    ValidationGroup="reg"
+                    Display="Dynamic" >
+                </asp:RequiredFieldValidator>
+            </div>
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon iconfont icon-yonghu"></span> </span>
                 </div>
-                <asp:TextBox ID="txtUserName" runat="server" placeholder="用户名" CssClass="form-control"></asp:TextBox>
-            </div> <!-- form-group// -->
-            <div class="form-group input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <span class="icon iconfont icon-youxiang"></span></span>
-                </div>
-                <asp:TextBox ID="txtTel" runat="server" CssClass="form-control inline-block" placeholder="手机号"></asp:TextBox>
-            </div> <!-- form-group// -->
+                <asp:TextBox ID="txtUserName" runat="server" placeholder="用户名" CssClass="form-control" AutoComplete="off"></asp:TextBox>
+            </div>
             
+            <div>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
+                    style="font-size:80%;color:crimson"
+                    ControlToValidate="txtPwd"
+                    ErrorMessage="请填写此项"
+                    ValidationGroup="reg"
+                    Display="Dynamic" >
+                </asp:RequiredFieldValidator>
+            </div>
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon iconfont icon-mima"></span></span>
                 </div>
-                <asp:TextBox ID="txtPwd" runat="server" placeholder="输入密码" TextMode="Password" CssClass="form-control"></asp:TextBox>
-            </div> <!-- form-group// -->
+                <asp:TextBox ID="txtPwd" runat="server" placeholder="输入密码" TextMode="Password" CssClass="form-control" AutoComplete="Off"></asp:TextBox>
+            </div>
+            
+            <div>
+                <asp:CompareValidator ID="CompareValidator1" runat="server"
+                    ErrorMessage="两次密码输入不一致"
+                    style="font-size:80%;color:crimson"
+                    ControlToValidate="txtPwdRepeat"
+                    ControlToCompare="txtPwd"
+                    ValidationGroup="reg"
+                    Display="Dynamic">
+                </asp:CompareValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
+                    style="font-size:80%;color:crimson"
+                    ControlToValidate="txtPwdRepeat"
+                    ErrorMessage="请填写此项"
+                    ValidationGroup="reg"
+                    Display="Dynamic" >
+                </asp:RequiredFieldValidator>
+            </div>
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><span class="icon iconfont icon-mima1"></span> </span>
                 </div>
-                <asp:TextBox ID="txtPwdRepeat" runat="server" CssClass="form-control" placeholder="重复密码"></asp:TextBox>
-            </div> <!-- form-group// --> 
+                <asp:TextBox ID="txtPwdRepeat" runat="server" CssClass="form-control" placeholder="重复密码" AutoComplete="off" TextMode="Password"></asp:TextBox>
+            </div>
               <div class="form-group">
-                  <asp:LinkButton ID="btnReg" runat="server" CssClass="btn btn-primary btn-block" OnClick="LinkButton1_Click">注册</asp:LinkButton>                
-            </div> <!-- form-group// -->     
+                  <asp:LinkButton ID="btnReg" runat="server" CssClass="btn btn-primary btn-block" OnClick="Reg_Click">注册</asp:LinkButton>                
+            </div>
 
         </article> 
     </div>  
-</asp:Panel>
+    </asp:Panel>
+    <uc1:Modal runat="server" id="Modal" />
 </asp:Content>
 

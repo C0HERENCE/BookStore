@@ -23,19 +23,27 @@ namespace BookStoreUI
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            string a = txtUsername.Text;
-            string b = txtPwd.Text;
-            if (UserInfoBLL.Login(a, b, isAdmin))
+            string msg = UserInfoBLL.GetUserCountByNameAndPwd(txtUsername.Text, txtPwd.Text, isAdmin);
+            if (msg == "登录成功")
             {
                 Session["isadmin"] = isAdmin;
                 Session["uname"] = txtUsername.Text;
-                ClientScript.RegisterStartupScript(ClientScript.GetType(), "", "<script>showSuccess();</script>");
+                Session["uid"] = UserInfoBLL.GetIDByName(txtUsername.Text);
+                if (isAdmin)
+                {
+                    Modal.Show(this, "登录成功，即将跳转到管理面板", 1000, "dashboard/index.aspx");
+                }
+                else
+                {
+                    Modal.Show(this, "登录成功，即将跳转到首页", 1000, "index.aspx");
+                }
             }
             else
             {
-                Session["isadmin"] = false;
-                Session["uname"] = "";
-                ClientScript.RegisterStartupScript(ClientScript.GetType(), "", "<script>showError();</script>");
+                Session["isadmin"] = null;
+                Session["uname"] = null;
+                Session["uid"] = null;
+                Modal.Show(this, msg);
             }
         }
     }

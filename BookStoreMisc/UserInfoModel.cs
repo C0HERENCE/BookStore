@@ -7,19 +7,19 @@ namespace BookStoreMisc
 {
     public class UserInfoModel
     {
-        public int id;
-        public string username;
-        public string password;
-        public int role;
-        public string reg_date;
-        public int gender;
-        public string mail;
-        public string tel;
-        public bool enabled;
-        public string avatar;
-        public float balance;
+        public int id = 0;
+        public string username = "";
+        public string password = "";
+        public int role = 0;
+        public string reg_date = "";
+        public int gender = 1;
+        public string mail = "";
+        public string tel = "";
+        public int enabled = 1;
+        public string avatar = "";
+        public double balance = 0;
 
-        public UserInfoModel(int id, string username, string password, int role, string reg_date, int gender, string mail, string tel, bool enabled, string avatar, float balance)
+        public UserInfoModel(int id, string username, string password, int role, string reg_date, int gender, string mail, string tel, int enabled, string avatar, double balance)
         {
             this.id = id;
             this.username = username;

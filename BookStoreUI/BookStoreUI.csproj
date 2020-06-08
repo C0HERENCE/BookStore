@@ -80,7 +80,9 @@
     <Content Include="Controls\Dashboard\UserManageControls\UserOrder.ascx" />
     <Content Include="Controls\Dashboard\UserManageControls\UserStat.ascx" />
     <Content Include="Controls\Element\BookRowElement.ascx" />
+    <Content Include="Controls\Element\NavBarElement.ascx" />
     <Content Include="Controls\Element\TopListElement.ascx" />
+    <Content Include="Controls\Modal.ascx" />
     <Content Include="Controls\Navbar.ascx" />
     <Content Include="Controls\TopList.ascx" />
     <Content Include="Controls\WeeklyBook.ascx" />
@@ -2313,12 +2315,26 @@
     <Compile Include="Controls\Element\BookRowElement.ascx.designer.cs">
       <DependentUpon>BookRowElement.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Element\NavBarElement.ascx.cs">
+      <DependentUpon>NavBarElement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Element\NavBarElement.ascx.designer.cs">
+      <DependentUpon>NavBarElement.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Element\TopListElement.ascx.cs">
       <DependentUpon>TopListElement.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\Element\TopListElement.ascx.designer.cs">
       <DependentUpon>TopListElement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Modal.ascx.cs">
+      <DependentUpon>Modal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Modal.ascx.designer.cs">
+      <DependentUpon>Modal.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Navbar.ascx.cs">
       <DependentUpon>Navbar.ascx</DependentUpon>

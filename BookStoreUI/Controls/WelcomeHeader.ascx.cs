@@ -11,11 +11,10 @@ namespace BookStoreUI.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (false)
+            if (Session["uname"] != null)
             {
                 string greatting="你好";
-                string username="";
-                username = "PongPongPong";
+                string username = (string)Session["uname"];
                 var timenow = DateTime.Now;
                 if (timenow.Hour>=14&&timenow.Hour<18)
                 {
@@ -37,7 +36,7 @@ namespace BookStoreUI.Controls
                 {
                     greatting = "上午好，";
                 }
-                Label1.Text = greatting + username;
+                txtGreeting.Text = greatting + username;
                 Panel1.Visible = false;
             }
         }

@@ -18,6 +18,7 @@ namespace BookStoreUI
             BestSellersRow.SetBooks(BookStatBLL.GetHighestStarsBooks(5));
             TopRatedBooksRow.SetTitle("评分最高","Top Rated Books");
             TopRatedBooksRow.SetBooks(BookStatBLL.GetHighestStarsBooks(5));
+            Navbar.SetLinks(CategoryBLL.GetCategoryByRole(0));
         }
     }
 }

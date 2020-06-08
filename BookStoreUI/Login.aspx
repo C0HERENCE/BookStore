@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="Masters/Main.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="BookStoreUI.Login" %>
 
+<%@ Register Src="~/Controls/Modal.ascx" TagPrefix="uc1" TagName="Modal" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="login">
         <div class="card bg-light">
@@ -10,7 +13,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><span class="icon iconfont icon-yonghu"></span></span>
                     </div>
-                    <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="用户名/手机号/邮箱" />
+                    <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="用户名" />
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
@@ -36,44 +39,13 @@
                     </p>
 
                     <p>
-                        <a href="#" class="btn btn-block btn-qq"><span class="icon iconfont icon-qq"></span>通过QQ登录</a>
-                        <a href="#" class="btn btn-block btn-weixin"><span class="icon iconfont icon-weixin"></span>通过微信登录</a>
+                        <a href="#" class="btn btn-block btn-qq"><span class="icon iconfont icon-qq" style="cursor:not-allowed"></span>通过QQ登录</a>
+                        <a href="#" class="btn btn-block btn-weixin"><span class="icon iconfont icon-weixin" style="cursor:not-allowed"></span>通过微信登录</a>
                     </p>
 
                 </asp:Panel>
             </article>
         </div>
     </div>
-
-    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="LoginModalLabel">提示</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        var showSuccess = function () {
-            $('#LoginModal .modal-body').text('登录成功, 即将跳转到后台管理系统');
-            $('#LoginModal').modal('show');
-            setTimeout(function () {
-                document.location.href = "dashboard.aspx";
-            }, 1000);
-        }
-        var showError = function () {
-            $('#LoginModal .modal-body').text('登陆失败');
-            $('#LoginModal').modal('show');
-        }
-    </script>
+    <uc1:Modal runat="server" id="Modal" />
 </asp:Content>

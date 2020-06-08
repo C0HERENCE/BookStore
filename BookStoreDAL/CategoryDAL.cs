@@ -13,7 +13,7 @@ namespace BookStoreDAL
         public static SqlDataReader SelectCategoryByRole(int role)
         {
             return SqlHelper.ExecuteDataReader(
-                "select id,name from category where role=@role",
+                "select * from category where role=@role",
                 new SqlParameter[] { new SqlParameter("role", role) }
                 );
         }
