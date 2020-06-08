@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BookStoreBLL;
 
 namespace BookStoreUI
 {
@@ -11,7 +12,10 @@ namespace BookStoreUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            BookRow.SetTitle("Biaoti", "di");
+            BookRow.SetBooks(BookStatBLL.GetNewestBooks(5));
+            BookRow1.SetTitle("Biaoti", "di");
+            BookRow2.SetTitle("Biaoti", "di");
         }
     }
 }

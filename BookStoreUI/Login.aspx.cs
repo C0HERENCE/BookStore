@@ -25,7 +25,7 @@ namespace BookStoreUI
         {
             string a = txtUsername.Text;
             string b = txtPwd.Text;
-            if (UserInfoBBL.Login(a, b, isAdmin))
+            if (UserInfoBLL.Login(a, b, isAdmin))
             {
                 Session["isadmin"] = isAdmin;
                 Session["uname"] = txtUsername.Text;

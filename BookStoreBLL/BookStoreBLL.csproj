@@ -66,7 +66,7 @@
     <Compile Include="BookStatBLL.cs" />
     <Compile Include="PublisherBLL.cs" />
     <Compile Include="CategoryBLL.cs" />
-    <Compile Include="UserInfoBBL.cs" />
+    <Compile Include="UserInfoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -7,13 +7,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <asp:Image ID="Image1" runat="server" CssClass="d-block w-100" ImageUrl="~/UI/Public/Images/1.jpg"/>
+            <asp:Image ID="Image1" runat="server" CssClass="d-block w-100" ImageUrl="~/Public/Images/1.jpg"/>
         </div>
         <div class="carousel-item">
-            <asp:Image ID="Image2" runat="server" CssClass="d-block w-100" ImageUrl="~/UI/Public/Images/2.jpg"/>
+            <asp:Image ID="Image2" runat="server" CssClass="d-block w-100" ImageUrl="~/Public/Images/2.jpg"/>
         </div>
         <div class="carousel-item">
-            <asp:Image ID="Image3" runat="server" CssClass="d-block w-100" ImageUrl="~/UI/Public/Images/3.jpg"/>
+            <asp:Image ID="Image3" runat="server" CssClass="d-block w-100" ImageUrl="~/Public/Images/3.jpg"/>
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

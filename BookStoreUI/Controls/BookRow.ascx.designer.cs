@@ -24,57 +24,30 @@ namespace BookStoreUI.Controls
         protected global::BookStoreUI.Controls.Element.BookRowElement BookRowElement7;
 
         /// <summary>
-        /// BookRowElement control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.Element.BookRowElement BookRowElement;
+        protected global::System.Web.UI.WebControls.Label txtName;
 
         /// <summary>
-        /// BookRowElement1 control.
+        /// txtSubName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.Element.BookRowElement BookRowElement1;
+        protected global::System.Web.UI.WebControls.Label txtSubName;
 
         /// <summary>
-        /// BookRowElement2 control.
+        /// booksContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.Element.BookRowElement BookRowElement2;
-
-        /// <summary>
-        /// BookRowElement3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BookStoreUI.Controls.Element.BookRowElement BookRowElement3;
-
-        /// <summary>
-        /// BookRowElement4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BookStoreUI.Controls.Element.BookRowElement BookRowElement4;
-
-        /// <summary>
-        /// BookRowElement5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BookStoreUI.Controls.Element.BookRowElement BookRowElement5;
+        protected global::System.Web.UI.WebControls.PlaceHolder booksContent;
     }
 }

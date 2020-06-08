@@ -13,5 +13,12 @@ namespace BookStoreUI.Controls.Element
         {
 
         }
+
+        internal void SetBook(BookStoreMisc.BookStatModel book)
+        {
+            imgCover.ImageUrl = book.image;
+            txtBookTitle.Text = book.title;
+            txtPrice.Text = book.price.ToString();
+        }
     }
 }
