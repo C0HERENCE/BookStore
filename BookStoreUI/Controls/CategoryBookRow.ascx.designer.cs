@@ -15,6 +15,15 @@ namespace BookStoreUI.Controls
     {
 
         /// <summary>
+        /// linkImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink linkImg;
+
+        /// <summary>
         /// imgCover control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace BookStoreUI.Controls
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgCover;
+
+        /// <summary>
+        /// linkMid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink linkMid;
 
         /// <summary>
         /// txtTitle control.
@@ -33,6 +51,24 @@ namespace BookStoreUI.Controls
         protected global::System.Web.UI.WebControls.Label txtTitle;
 
         /// <summary>
+        /// txtAuthor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtAuthor;
+
+        /// <summary>
+        /// txtPublisher control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtPublisher;
+
+        /// <summary>
         /// txtSummary control.
         /// </summary>
         /// <remarks>
@@ -42,13 +78,40 @@ namespace BookStoreUI.Controls
         protected global::System.Web.UI.WebControls.Label txtSummary;
 
         /// <summary>
-        /// btnAddCart control.
+        /// txtOriginPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnAddCart;
+        protected global::System.Web.UI.WebControls.Label txtOriginPrice;
+
+        /// <summary>
+        /// txtPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtPrice;
+
+        /// <summary>
+        /// txtStars control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtStars;
+
+        /// <summary>
+        /// txtSales control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtSales;
 
         /// <summary>
         /// btnDetail control.
@@ -58,5 +121,14 @@ namespace BookStoreUI.Controls
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnDetail;
+
+        /// <summary>
+        /// btnAddCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnAddCart;
     }
 }

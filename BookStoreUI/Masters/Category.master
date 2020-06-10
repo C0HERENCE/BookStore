@@ -4,102 +4,103 @@
 <%@ Register Src="~/Controls/WelcomeHeader.ascx" TagPrefix="uc1" TagName="WelcomeHeader" %>
 
 
+<asp:Content ID="styleContent" ContentPlaceHolderID="StyleContent" runat="server">
+    <link rel="stylesheet" href="Public/CSS/pagination.css" />
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <uc1:WelcomeHeader runat="server" ID="WelcomeHeader" />
     <uc1:Navbar runat="server" ID="Navbar" />
     <div class="container">
-        <div>
-            <p class="text-muted">
-                当前位置:
-                <a href="index.html" class="text-decoration-none ">首页</a>
-                <span>-</span>
-                <a>分类</a>
-            </p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">首页</a></li>
+                <li class="breadcrumb-item"><a href="#">经济</a></li>
+                <li class="breadcrumb-item active" aria-current="page">经济学人</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-md-3">
+                <p class="font-weight-bold">筛选</p>
 
-            <div class="row">
-                <div class="col-md-3">
-                    <p class="font-weight-bold">筛选</p>
+                <div class="text-muted">
 
-                    <div class="text-muted">
-
-                        <div class="form-group">
-                            <label for="formControlRange">价格：</label>
-                            <input type="range" class="form-control-range" min="0" max="5" id="formControlRange">
-                            <span>10元</span>
-                            <span class="float-right">200元</span>
+                    <div class="form-group">
+                        <label for="formControlRange">价格：</label>
+                        <input type="range" class="form-control-range" min="0" max="5" id="formControlRange">
+                        <span>10元</span>
+                        <span class="float-right">200元</span>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="">包含关键词：</label>
+                        <input type="text" name="" class="form-control" placeholder="" aria-describedby="helpId">
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="">出版社：</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                浙江大学出版社
+                            </label>
                         </div>
-                        <hr>
-                        <div class="form-group">
-                            <label for="">包含关键词：</label>
-                            <input type="text" name="" class="form-control" placeholder="" aria-describedby="helpId">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                清华大学出版社
+                            </label>
                         </div>
-                        <hr>
-                        <div class="form-group">
-                            <label for="">出版社：</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <label class="form-check-label">
-                                    浙江大学出版社
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <label class="form-check-label">
-                                    清华大学出版社
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <label class="form-check-label">
-                                    北京出版社
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <label class="form-check-label">
-                                    机械工业出版社
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <label class="form-check-label">
-                                    人民日报出版社
-                                </label>
-                            </div>
-                            <a href="#">更多</a>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                北京出版社
+                            </label>
                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                机械工业出版社
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <label class="form-check-label">
+                                人民日报出版社
+                            </label>
+                        </div>
+                        <a href="#">更多</a>
+                    </div>
 
-                        <hr>
+                    <hr>
 
-                        <div class="form-group">
-                            <label for="">详细分类：</label>
-                            <ul class="list-group">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="#" class="text-decoration-none">C++/C  </a>
-                                    <span class="badge badge-primary badge-pill">14</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="#" class="text-decoration-none">Java </a>
-                                    <span class="badge badge-primary badge-pill">2</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="#" class="text-decoration-none">HTML5 </a>
-                                    <span class="badge badge-primary badge-pill">1</span>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="form-group">
+                        <label for="">详细分类：</label>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none">C++/C  </a>
+                                <span class="badge badge-primary badge-pill">14</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none">Java </a>
+                                <span class="badge badge-primary badge-pill">2</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none">HTML5 </a>
+                                <span class="badge badge-primary badge-pill">1</span>
+                            </li>
+                        </ul>
+                    </div>
 
-                        <hr>
-                        <div style="width: 100%; text-align: center; padding: 10px">
-                            <button class="btn btn-primary" type="submit">确认</button>
-                        </div>
+                    <hr>
+                    <div style="width: 100%; text-align: center; padding: 10px">
+                        <button class="btn btn-primary" type="submit">确认</button>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-md-6">
-                    <asp:ContentPlaceHolder ID="CatagoryDetail" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
+            <div class="col-md-9">
+                <asp:ContentPlaceHolder ID="CatagoryDetail" runat="server">
+                </asp:ContentPlaceHolder>
             </div>
         </div>
     </div>

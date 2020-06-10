@@ -14,52 +14,63 @@ namespace BookStoreDAL
 
         public static int ExecuteNonQuery(string sqlStr, SqlParameter[] param)
         {
-            SqlConnection conn = new SqlConnection(connStr);
-            SqlCommand cmd = new SqlCommand(sqlStr, conn);
-            cmd.Parameters.AddRange(param);
-            conn.Open();
-            try
-            {
-
-            int s = cmd.ExecuteNonQuery();
-                conn.Close();
-                return s;
-            }
-            catch (Exception ee)
-            {
-                string s = ee.Message;
-                int a = 3;
-                throw;
-            }
-            //using (SqlConnection conn = new SqlConnection(connStr))
+            //SqlConnection conn = new SqlConnection(connStr);
+            //SqlCommand cmd = new SqlCommand(sqlStr, conn);
+            //cmd.Parameters.AddRange(param);
+            //conn.Open();
+            //try
             //{
-            //    using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
-            //    {
-            //        cmd.Parameters.AddRange(param);
-            //        conn.Open();
-            //        return cmd.ExecuteNonQuery();
-            //    }
-            //}
-        }
 
-        public static DataTable ExecuteDataTable(string sqlStr, SqlParameter[] param)
-        {
+            //int s = cmd.ExecuteNonQuery();
+            //    conn.Close();
+            //    return s;
+            //}
+            //catch (Exception ee)
+            //{
+            //    string s = ee.Message;
+            //    int a = 3;
+            //    throw;
+            //}
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
                 {
-                    if (param != null)
-                    {
-                        cmd.Parameters.AddRange(param);
-                    }
-                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dt = new DataTable();
-                        sda.Fill(dt);
-                        return dt;
-                    }
+                    cmd.Parameters.AddRange(param);
+                    conn.Open();
+                    return cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        public static DataTable ExecuteDataTable(string sqlStr, SqlParameter[] param)
+        {
+            SqlConnection conn = new SqlConnection(connStr);
+            SqlCommand cmd = new SqlCommand(sqlStr, conn);
+
+            if (param != null)
+            {
+                cmd.Parameters.AddRange(param);
+            }
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+            //using (SqlConnection conn = new SqlConnection(connStr))
+            //{
+            //    using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+            //    {
+            //        if (param != null)
+            //        {
+            //            cmd.Parameters.AddRange(param);
+            //        }
+            //        using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+            //        {
+            //            DataTable dt = new DataTable();
+            //            sda.Fill(dt);
+            //            return dt;
+            //        }
+            //    }
+            //}
         }
         public static DataTable ExecuteDataTable(string sqlStr)
         {

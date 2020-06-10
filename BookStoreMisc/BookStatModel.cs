@@ -27,12 +27,15 @@ namespace BookStoreMisc
         public string origintitle;
         public string subtitle;
         public int categoryrole;
+        public int author_id;
+        public int category_id;
+        public int publisher_id;
 
         public BookStatModel()
         {
         }
 
-        public BookStatModel(int id, string title, string category, string author, string publisher, string isbn, int stock, double price, int onsale, DateTime datetime, double stars, string image, string pubdate, string pages, string origin_price, string summary, string catalog, string origintitle, string subtitle, int categoryrole)
+        public BookStatModel(int id, string title, string category, string author, string publisher, string isbn, int stock, double price, int onsale, DateTime datetime, double stars, string image, string pubdate, string pages, string origin_price, string summary, string catalog, string origintitle, string subtitle, int categoryrole, int author_id, int category_id, int publisher_id)
         {
             this.id = id;
             this.title = title;
@@ -54,6 +57,9 @@ namespace BookStoreMisc
             this.origintitle = origintitle;
             this.subtitle = subtitle;
             this.categoryrole = categoryrole;
+            this.author_id = author_id;
+            this.category_id = category_id;
+            this.publisher_id = publisher_id;
         }
     }
 

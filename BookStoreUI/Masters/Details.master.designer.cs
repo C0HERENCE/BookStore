@@ -7,47 +7,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BookStoreUI
+namespace BookStoreUI.Masters
 {
 
 
-    public partial class Category
+    public partial class Details
     {
 
         /// <summary>
-        /// ScriptManager1 control.
+        /// WelcomeHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::BookStoreUI.Controls.WelcomeHeader WelcomeHeader;
 
         /// <summary>
-        /// UpdatePanel1 control.
+        /// Navbar1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::BookStoreUI.Controls.Navbar Navbar1;
 
         /// <summary>
-        /// list control.
+        /// DetailContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView list;
-
-        /// <summary>
-        /// pager control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataPager pager;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder DetailContent;
     }
 }

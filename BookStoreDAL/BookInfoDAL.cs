@@ -52,7 +52,6 @@ namespace BookStoreDAL
             return SqlHelper.ExecuteDataTable(sql, null);
         }
 
-
         public static int DelBook(int bookid, int del)
         {
             string sql = "UPDATE book SET del = @del WHERE id = @id";
@@ -60,6 +59,15 @@ namespace BookStoreDAL
             param[0] = new SqlParameter("del", del);
             param[1] = new SqlParameter("id", bookid);
             return SqlHelper.ExecuteNonQuery(sql, param);
+        }
+
+        public static DataTable SelectBookByCategory(int i)
+        {
+            string sql = "select* from bookstat_full where category_role = @category and onsale = @onsale";
+            return SqlHelper.ExecuteDataTable(sql,new SqlParameter[] { 
+                new SqlParameter("category",i),
+                new SqlParameter("onsale",1),
+            });
         }
     }
 }

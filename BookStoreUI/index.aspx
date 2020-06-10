@@ -7,6 +7,7 @@
 <%@ Register Src="Controls/TopList.ascx" TagPrefix="uc1" TagName="TopList" %>
 <%@ Register Src="Controls/BookRow.ascx" TagPrefix="uc1" TagName="BookRow" %>
 
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <uc1:WelcomeHeader runat="server" ID="WelcomeHeader" />
     <uc1:Navbar runat="server" ID="Navbar" />

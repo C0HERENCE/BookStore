@@ -58,7 +58,10 @@ namespace BookStoreBLL
                     reader.GetString(16),
                     reader.GetString(17),
                     reader.GetString(18),
-                    reader.GetInt32(19)
+                    reader.GetInt32(19),
+                    reader.GetInt32(20),
+                    reader.GetInt32(21),
+                    reader.GetInt32(22)
                     );
                 books.Add(book);
             }
@@ -90,7 +93,10 @@ namespace BookStoreBLL
                     reader.GetString(16),
                     reader.GetString(17),
                     reader.GetString(18),
-                    reader.GetInt32(19)
+                    reader.GetInt32(19),
+                    reader.GetInt32(20),
+                    reader.GetInt32(21),
+                    reader.GetInt32(22)
                     );
                 books.Add(book);
             }

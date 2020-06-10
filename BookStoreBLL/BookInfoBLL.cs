@@ -97,5 +97,9 @@ namespace BookStoreBLL
             return JsonConvert.SerializeObject(delBook);
         }
 
+        public static DataTable GetAllBookOfCategory(int id)
+        {
+            return BookInfoDAL.SelectBookByCategory(id);
+        }
     }
 }
