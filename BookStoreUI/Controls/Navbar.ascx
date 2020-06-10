@@ -5,7 +5,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand" href="/">CC 书店</a>
+        <a class="navbar-brand" href="/index.aspx">CC 书店</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 

@@ -2,6 +2,6 @@
 <li class="nav-item">
     <asp:HyperLink ID="Link" runat="server"
         CssClass="nav-link"
-        NavigateUrl="category.aspx?category="
+        NavigateUrl="/category.aspx?category="
         Text=""></asp:HyperLink>
 </li>

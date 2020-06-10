@@ -7,38 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BookStoreUI.Masters
+namespace BookStoreUI
 {
 
 
-    public partial class NestedMasterPage1
+    public partial class Category
     {
 
         /// <summary>
-        /// WelcomeHeader control.
+        /// txtCateTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.WelcomeHeader WelcomeHeader;
+        protected global::System.Web.UI.WebControls.Label txtCateTitle;
 
         /// <summary>
-        /// Navbar control.
+        /// contentholder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.Navbar Navbar;
-
-        /// <summary>
-        /// CatagoryDetail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder CatagoryDetail;
+        protected global::System.Web.UI.WebControls.PlaceHolder contentholder;
     }
 }

@@ -21,6 +21,7 @@
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
 }
+
 .bookrowele .card-title {
     font-size: 1rem;
     text-align: center;
@@ -233,6 +234,37 @@
     background-color: #42AEEC;
     color: #fff;
 }
+
+
+.bookdetailrow {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: lightyellow 1px solid;
+}
+
+    .bookdetailrow .big-btn {
+        opacity: 0;
+        bottom: 20px;
+        height: 2.3rem;
+    }
+
+    .bookdetailrow :hover .bookdetailrow{
+        border: lightslategrey 1px solid;
+    }
+
+        .bookdetailrow :hover img {
+            opacity: 0.7;
+        }
+
+        .bookdetailrow :hover .big-btn {
+            -webkit-animation: fadeIn .3s ease both;
+            -moz-animation: fadeIn .3s ease both;
+        }
+
+
 .login .divider-text {
     position: relative;
     text-align: center;

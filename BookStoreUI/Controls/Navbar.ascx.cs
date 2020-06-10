@@ -28,7 +28,7 @@ namespace BookStoreUI.Controls
                     HyperLink link = new HyperLink();
                     link.CssClass = "dropdown-item";
                     link.Text = category.name;
-                    link.NavigateUrl = "category.aspx?category=" + category.id;
+                    link.NavigateUrl = "/category.aspx?category=" + category.id;
                     content2.Controls.Add(link);
                 }
                 else

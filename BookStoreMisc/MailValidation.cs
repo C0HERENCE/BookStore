@@ -56,9 +56,9 @@ namespace BookStoreMisc
             SmtpClient client = new SmtpClient();
             client.Credentials = new System.Net.NetworkCredential(cfg.Network.UserName, cfg.Network.Password);
 
-            client.Port = cfg.Network.Port;
+            //client.Port = cfg.Network.Port;
             client.Host = cfg.Network.Host;
-            client.EnableSsl = true;
+            client.EnableSsl = false;
             try
             {
                 client.Send(mailMessage);

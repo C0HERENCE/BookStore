@@ -17,8 +17,8 @@ namespace BookStoreUI.Controls.Element
 
         public void SetLink(CategoryModel catagory)
         {
+            Link.NavigateUrl = "/category.aspx?category=" + catagory.id.ToString();
             Link.Text = catagory.name;
-            Link.NavigateUrl = "category.aspx?category=" + catagory.id.ToString();
         }
     }
 }

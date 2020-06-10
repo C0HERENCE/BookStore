@@ -65,9 +65,10 @@
     <Content Include="App_Data\bookstore_log.ldf">
       <DependentUpon>bookstore.mdf</DependentUpon>
     </Content>
-    <Content Include="Catagory.aspx" />
+    <Content Include="Category.aspx" />
     <Content Include="Controls\BookRow.ascx" />
     <Content Include="Controls\Carousel.ascx" />
+    <Content Include="Controls\CategoryBookRow.ascx" />
     <Content Include="Controls\Dashboard\BookManageControls\BookDataTable.ascx" />
     <Content Include="Controls\Dashboard\BookManageControls\BookEdit.ascx" />
     <Content Include="Controls\Dashboard\BookManageControls\BookInsert.ascx" />
@@ -1948,6 +1949,11 @@
     <Content Include="Public\CSS\LayUI\lay\modules\upload.js" />
     <Content Include="Public\CSS\LayUI\lay\modules\util.js" />
     <Content Include="Public\CSS\materialize.css" />
+    <Content Include="Public\iconfont\demo.css" />
+    <Content Include="Public\iconfont\demo_index.html" />
+    <Content Include="Public\iconfont\iconfont.css" />
+    <Content Include="Public\iconfont\iconfont.js" />
+    <Content Include="Public\iconfont\iconfont.svg" />
     <Content Include="Public\Images\1.jpg" />
     <Content Include="Public\Images\2.jpg" />
     <Content Include="Public\Images\3.jpg" />
@@ -2200,6 +2206,7 @@
     <Content Include="Public\JS\Dashboard.js" />
     <Content Include="Public\JS\jquery-3.5.1.js" />
     <Content Include="Public\JS\materialize.js" />
+    <Content Include="Public\JS\pagination.js" />
     <Content Include="Register.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -2210,12 +2217,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Catagory.aspx.cs">
-      <DependentUpon>Catagory.aspx</DependentUpon>
+    <Compile Include="Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Catagory.aspx.designer.cs">
-      <DependentUpon>Catagory.aspx</DependentUpon>
+    <Compile Include="Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controls\BookRow.ascx.cs">
       <DependentUpon>BookRow.ascx</DependentUpon>
@@ -2230,6 +2237,13 @@
     </Compile>
     <Compile Include="Controls\Carousel.ascx.designer.cs">
       <DependentUpon>Carousel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CategoryBookRow.ascx.cs">
+      <DependentUpon>CategoryBookRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CategoryBookRow.ascx.designer.cs">
+      <DependentUpon>CategoryBookRow.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Dashboard\BookManageControls\BookDataTable.ascx.cs">
       <DependentUpon>BookDataTable.ascx</DependentUpon>
@@ -2528,12 +2542,12 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Masters\Catagory.master.cs">
-      <DependentUpon>Catagory.master</DependentUpon>
+    <Compile Include="Masters\Category.master.cs">
+      <DependentUpon>Category.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Masters\Catagory.master.designer.cs">
-      <DependentUpon>Catagory.master</DependentUpon>
+    <Compile Include="Masters\Category.master.designer.cs">
+      <DependentUpon>Category.master</DependentUpon>
     </Compile>
     <Compile Include="Masters\Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -2580,7 +2594,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Masters\Catagory.master" />
+    <Content Include="Masters\Category.master" />
     <Content Include="Masters\Main.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -2759,10 +2773,14 @@
     <None Include="Public\CSS\LayUI\font\iconfont.ttf" />
     <None Include="Public\CSS\LayUI\font\iconfont.woff" />
     <None Include="Public\CSS\LayUI\font\iconfont.woff2" />
+    <Content Include="Public\iconfont\iconfont.eot" />
+    <Content Include="Public\iconfont\iconfont.json" />
+    <Content Include="Public\iconfont\iconfont.ttf" />
+    <Content Include="Public\iconfont\iconfont.woff" />
+    <Content Include="Public\iconfont\iconfont.woff2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dashboard\vendor\js\" />
-    <Folder Include="Public\Fonts\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
