@@ -5,7 +5,6 @@ using System.Web;
 using BookStoreMisc;
 using BookStoreDAL;
 using Newtonsoft.Json;
-using BookStoreMisc;
 
 
 namespace BookStoreBLL
@@ -30,6 +29,43 @@ namespace BookStoreBLL
                 msg = "失败";
             }
             return msg;
+        }
+
+        public static BookStatModel GetBookByID(int bookid)
+        {
+            var reader = BookStatDAL.SelectBookByID(bookid);
+            if (reader!=null && reader.Read())
+            {
+                BookStatModel book = new BookStatModel(
+                    reader.GetInt32(0),
+                    reader.GetString(1),
+                    reader.GetString(2),
+                    reader.GetString(3),
+                    reader.GetString(4),
+                    reader.GetString(5),
+                    reader.GetInt32(6),
+                    reader.GetDouble(7),
+                    reader.GetInt32(8),
+                    reader.GetDateTime(9),
+                    reader.GetDouble(10),
+                    reader.GetString(11),
+                    reader.GetString(12),
+                    reader.GetString(13),
+                    reader.GetString(14),
+                    reader.GetString(15),
+                    reader.GetString(16),
+                    reader.GetString(17),
+                    reader.GetString(18),
+                    reader.GetInt32(19),
+                    reader.GetInt32(20),
+                    reader.GetInt32(21),
+                    reader.GetInt32(22)
+                    );
+                return book;
+            }
+            BookStatModel book2 = new BookStatModel();
+            book2.id = -1;
+            return book2;
         }
 
         public static List<BookStatModel> GetNewestBooks(int count)

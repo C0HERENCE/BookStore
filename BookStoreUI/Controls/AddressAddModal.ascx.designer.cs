@@ -7,38 +7,56 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BookStoreUI.Masters
+namespace BookStoreUI.Controls
 {
 
 
-    public partial class Details
+    public partial class AddressAddModal
     {
 
         /// <summary>
-        /// WelcomeHeader control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.WelcomeHeader WelcomeHeader;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// Navbar control.
+        /// txtTel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.Navbar Navbar;
+        protected global::System.Web.UI.WebControls.TextBox txtTel;
 
         /// <summary>
-        /// DetailContent control.
+        /// txtAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder DetailContent;
+        protected global::System.Web.UI.WebControls.TextBox txtAdd;
+
+        /// <summary>
+        /// Add control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Add;
+
+        /// <summary>
+        /// Modal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BookStoreUI.Controls.Modal Modal;
     }
 }

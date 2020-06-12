@@ -9,17 +9,16 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <uc1:WelcomeHeader runat="server" ID="WelcomeHeader" />
-    <uc1:Navbar runat="server" ID="Navbar1" />
-    <nav aria-label="breadcrumb">
-        <div class="container">
+    <uc1:Navbar runat="server" ID="Navbar" />
+
+    <div class="container">
+        <nav aria-label="breadcrumb" class="bg-light">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">首页</a></li>
                 <li class="breadcrumb-item"><a href="#">经济</a></li>
                 <li class="breadcrumb-item active" aria-current="page">经济学人</li>
             </ol>
-        </div>
-    </nav>
-    <div class="container">
+        </nav>
         <div class="row">
             <div class="col-md-9 col-sm-12 col-xs-12">
                 <asp:ContentPlaceHolder runat="server" ID="DetailContent"></asp:ContentPlaceHolder>
@@ -29,8 +28,4 @@
             </div>
         </div>
     </div>
-    <script src="./src/bootstrap-input-spinner.js"></script>
-    <script>
-        $("input[type='number']").inputSpinner();
-    </script>
 </asp:Content>

@@ -34,10 +34,10 @@
     <script type="text/javascript">
         function bindShadow() {
             $('.bookdetailrow').mouseover(function (e) {
-                $(e.target).parents('.bookdetailrow').addClass('shadow-lg').removeClass('shadow');
+                $(e.target).parents('.bookdetailrow').addClass('shadow').removeClass('shadow-sm');
             })
             $('.bookdetailrow').mouseout(function (e) {
-                $(e.target).parents('.bookdetailrow').removeClass('shadow-lg').addClass('shadow');
+                $(e.target).parents('.bookdetailrow').removeClass('shadow').addClass('shadow-sm');
             })
         }
         $('document').ready()

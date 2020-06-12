@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CategoryBookRow.ascx.cs" Inherits="BookStoreUI.Controls.CategoryBookRow" %>
-<div class="bookdetailrow row shadow p-2 mb-3 bg-white rounded">
+<div class="bookdetailrow row shadow-sm p-2 mb-3 bg-white rounded">
     <div class="col-lg-3">
         <asp:HyperLink ID="linkImg" runat="server" OnPreRender="linkImg_PreRender">
             <asp:Image ID="imgCover" runat="server" Width="100%" CssClass="img-thumbnail" OnPreRender="imgCover_PreRender" />
@@ -7,7 +7,6 @@
     </div>
     <div class="col-lg-7">
         <asp:HyperLink ID="linkMid" runat="server" CssClass="text-decoration-none" OnPreRender="linkMid_PreRender">
-
             <p class="h4">
                 《<asp:Label ID="txtTitle" runat="server" Text="TITLE" CssClass="font-weight-bold" OnPreRender="txtTitle_PreRender"></asp:Label>》
             </p>
@@ -23,7 +22,6 @@
                         Style="display: -webkit-box; display: -moz-box; white-space: pre-wrap; -webkit-box-orient: vertical; -webkit-line-clamp: 7;" OnPreRender="txtSummary_PreRender"></asp:Label>
                 </small>
             </p>
-
         </asp:HyperLink>
     </div>
     <div class="col-lg-2">
@@ -43,9 +41,9 @@
             <asp:Label ID="txtSales" runat="server" Text="总销量：332" OnPreRender="txtSales_PreRender"></asp:Label>
         </p>
         <div style="text-align: center;">
-            <asp:LinkButton ID="btnDetail" runat="server" class="btn btn-primary big-btn rounded-pill mb-2" Style="width: 6rem;">
+            <asp:LinkButton ID="btnBuy" runat="server" class="btn btn-primary big-btn rounded-pill mb-2" Style="width: 6rem;">
                 <span class="icon iconfont icon-fangdajing float-left"></span>
-                详情
+                购买
             </asp:LinkButton>
             <asp:LinkButton ID="btnAddCart" runat="server" class="btn btn-primary big-btn rounded-pill mb-2" Style="width: 6rem;">
                 <span class="icon iconfont icon-gouwuche1 float-left"></span>

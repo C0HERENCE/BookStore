@@ -70,5 +70,25 @@ namespace BookStoreBLL
             }
             return msg;
         }
+
+        public static UserInfoModel GetUserInfoByID(int id)
+        {
+            UserInfoModel user = new UserInfoModel();
+            var reader = UserInfoDAL.SelectUserByID(id);
+            if (reader == null) return user;
+            reader.Read();
+            user.id = reader.GetInt32(0);
+            user.username = reader.GetString(1);
+            user.password = reader.GetString(2);
+            user.role = reader.GetInt32(3);
+            user.reg_date = reader.GetDateTime(4);
+            user.gender = reader.GetInt32(5);
+            user.mail = reader.GetString(6);
+            user.tel = reader.GetString(7);
+            user.enabled = reader.GetInt32(8);
+            user.avatar = reader.GetString(9);
+            user.balance = reader.GetDouble(10);
+            return user;
+        }
     }
 }

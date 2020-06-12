@@ -66,6 +66,8 @@
       <DependentUpon>bookstore.mdf</DependentUpon>
     </Content>
     <Content Include="Category.aspx" />
+    <Content Include="Controls\AddressAddModal.ascx" />
+    <Content Include="Controls\AddressRow.ascx" />
     <Content Include="Controls\BookRow.ascx" />
     <Content Include="Controls\Carousel.ascx" />
     <Content Include="Controls\CategoryBookRow.ascx" />
@@ -85,6 +87,7 @@
     <Content Include="Controls\Element\TopListElement.ascx" />
     <Content Include="Controls\Modal.ascx" />
     <Content Include="Controls\Navbar.ascx" />
+    <Content Include="Controls\OrderBookRow.ascx" />
     <Content Include="Controls\TopList.ascx" />
     <Content Include="Controls\WeeklyBook.ascx" />
     <Content Include="Controls\WelcomeHeader.ascx" />
@@ -1842,6 +1845,8 @@
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Details.aspx" />
+    <Content Include="PlaceOrder.aspx" />
+    <Content Include="Profile.aspx" />
     <Content Include="Public\CSS\bootstrap.css" />
     <Content Include="Public\CSS\Custom.css" />
     <Content Include="Public\CSS\LayUI\css\layui.css" />
@@ -2227,6 +2232,20 @@
     <Compile Include="Category.aspx.designer.cs">
       <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\AddressAddModal.ascx.cs">
+      <DependentUpon>AddressAddModal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AddressAddModal.ascx.designer.cs">
+      <DependentUpon>AddressAddModal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddressRow.ascx.cs">
+      <DependentUpon>AddressRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AddressRow.ascx.designer.cs">
+      <DependentUpon>AddressRow.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BookRow.ascx.cs">
       <DependentUpon>BookRow.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2359,6 +2378,13 @@
     </Compile>
     <Compile Include="Controls\Navbar.ascx.designer.cs">
       <DependentUpon>Navbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderBookRow.ascx.cs">
+      <DependentUpon>OrderBookRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderBookRow.ascx.designer.cs">
+      <DependentUpon>OrderBookRow.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\TopList.ascx.cs">
       <DependentUpon>TopList.ascx</DependentUpon>
@@ -2572,6 +2598,20 @@
     </Compile>
     <Compile Include="Masters\Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PlaceOrder.aspx.cs">
+      <DependentUpon>PlaceOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlaceOrder.aspx.designer.cs">
+      <DependentUpon>PlaceOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Public\API\BatchEditBook.ashx.cs">

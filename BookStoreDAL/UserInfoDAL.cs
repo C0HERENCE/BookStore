@@ -62,6 +62,15 @@ namespace BookStoreDAL
             });
         }
 
+        public static SqlDataReader SelectUserByID(int id)
+        {
+            string sql = "select * from userinfo where id=@id";
+            return SqlHelper.ExecuteDataReader(sql, new SqlParameter[]
+            {
+                new SqlParameter("id",id)
+            });
+        }
+
         public static int InsertUser(UserInfoModel user)
         {
             string sql = "insert into userinfo values (@username,@password,@role,getdate(),@gender,@mail,@tel,1,@avatar,@balance)";

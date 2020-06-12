@@ -11,7 +11,7 @@ namespace BookStoreMisc
         public string username = "";
         public string password = "";
         public int role = 0;
-        public string reg_date = "";
+        public DateTime reg_date = DateTime.Now;
         public int gender = 1;
         public string mail = "";
         public string tel = "";
@@ -19,7 +19,7 @@ namespace BookStoreMisc
         public string avatar = "";
         public double balance = 0;
 
-        public UserInfoModel(int id, string username, string password, int role, string reg_date, int gender, string mail, string tel, int enabled, string avatar, double balance)
+        public UserInfoModel(int id, string username, string password, int role, DateTime reg_date, int gender, string mail, string tel, int enabled, string avatar, double balance)
         {
             this.id = id;
             this.username = username;

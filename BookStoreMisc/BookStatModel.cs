@@ -7,29 +7,29 @@ namespace BookStoreMisc
 {
     public class BookStatModel
     {
-        public int id;
-        public string title;
-        public string category;
-        public string author;
-        public string publisher;
-        public string isbn;
-        public int stock;
-        public double price;
-        public int onsale;
+        public int id = 0;
+        public string title = "";
+        public string category = "";
+        public string author = "";
+        public string publisher = "";
+        public string isbn = "";
+        public int stock = 0;
+        public double price = 0;
+        public int onsale = 0;
         public DateTime datetime;
-        public double stars;
-        public string image;
-        public string pubdate;
-        public string pages;
-        public string origin_price;
-        public string summary;
-        public string catalog;
-        public string origintitle;
-        public string subtitle;
-        public int categoryrole;
-        public int author_id;
-        public int category_id;
-        public int publisher_id;
+        public double stars = 0;
+        public string image = "";
+        public string pubdate = "";
+        public string pages = "";
+        public string origin_price = "";
+        public string summary = "";
+        public string catalog = "";
+        public string origintitle = "";
+        public string subtitle = "";
+        public int categoryrole = 0;
+        public int author_id = 0;
+        public int category_id = 0;
+        public int publisher_id = 0;
 
         public BookStatModel()
         {

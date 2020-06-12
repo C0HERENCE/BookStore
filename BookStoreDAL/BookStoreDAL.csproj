@@ -57,9 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressDAL.cs" />
     <Compile Include="BookInfoDAL.cs" />
     <Compile Include="AuthorDAL.cs" />
     <Compile Include="BookStatDAL.cs" />
+    <Compile Include="OrderDAL.cs" />
     <Compile Include="PublisherDAL.cs" />
     <Compile Include="CategoryDAL.cs" />
     <Compile Include="UserInfoDAL.cs" />

@@ -31,6 +31,14 @@ namespace BookStoreDAL
             });
         }
 
+        public static SqlDataReader SelectBookByID(int bookid)
+        {
+            string sql = "select * from bookstat_full where id=@id";
+            return SqlHelper.ExecuteDataReader(sql, new SqlParameter[]{
+                new SqlParameter("id",bookid)
+            });
+        }
+
         public static SqlDataReader SelectNewestBooksOnSale(int count)
         {
             string sql = "select TOP(0+@count) * from bookstat_full where onsale=1 order by up_date DESC";

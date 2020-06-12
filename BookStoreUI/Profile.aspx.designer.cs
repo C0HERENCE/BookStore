@@ -7,38 +7,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BookStoreUI.Masters
+namespace BookStoreUI
 {
 
 
-    public partial class Details
+    public partial class Profile
     {
 
         /// <summary>
-        /// WelcomeHeader control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.WelcomeHeader WelcomeHeader;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
 
         /// <summary>
-        /// Navbar control.
+        /// addresscontent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.Navbar Navbar;
+        protected global::System.Web.UI.WebControls.PlaceHolder addresscontent;
 
         /// <summary>
-        /// DetailContent control.
+        /// AddressAddModal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder DetailContent;
+        protected global::BookStoreUI.Controls.AddressAddModal AddressAddModal;
     }
 }
