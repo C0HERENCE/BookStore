@@ -12,5 +12,7 @@ namespace BookStoreMisc
         public string add = "";
         public string name = "";
         public int user_id = 0;
+        public int enabled = 0;
+        public int isdefault = 0;
     }
 }

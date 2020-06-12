@@ -88,7 +88,28 @@ namespace BookStoreBLL
             user.enabled = reader.GetInt32(8);
             user.avatar = reader.GetString(9);
             user.balance = reader.GetDouble(10);
+            if (!reader.IsClosed) reader.Close();
             return user;
+        }
+
+        public static string SetNewPassword(UserInfoModel user)
+        {
+            string msg = "密码修改失败";
+            if (UserInfoDAL.UpdateUserPassword(user) > 0)
+            {
+                msg = "密码修改成功";
+            }
+            return msg;
+        }
+
+        public static string SetNewInfo(UserInfoModel user)
+        {
+            string msg = "个人信息修改失败";
+            if (UserInfoDAL.UpdateUserInfo(user) > 0)
+            {
+                msg = "个人信息修改成功";
+            }
+            return msg;
         }
     }
 }

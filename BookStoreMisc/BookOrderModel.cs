@@ -7,8 +7,8 @@ namespace BookStoreMisc
 {
     public class BookOrderModel
     {
-        public BookStatModel book;
-        public int amount;
-        public double price;
+        public BookStatModel book = new BookStatModel();
+        public int amount = 0;
+        public double price = 0;
     }
 }

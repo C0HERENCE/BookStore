@@ -18,6 +18,7 @@ namespace BookStoreBLL
             {
                 dict.Add(reader.GetInt32(0), reader.GetString(1));
             }
+            if (!reader.IsClosed) reader.Close();
             return dict;
         }
         static public List<CategoryModel> GetCategoryByRole(int role)
@@ -30,15 +31,13 @@ namespace BookStoreBLL
             }
             while (reader.Read())
             {
-                var a =reader.GetInt32(0);
-                var b =reader.GetString(1);
-                var c = reader.GetInt32(2);
                 categories.Add(new CategoryModel(
                         reader.GetInt32(0),
                         reader.GetString(1),
                         reader.GetInt32(2)
                     ));
             }
+            if (!reader.IsClosed) reader.Close();
             return categories;
         }
     }

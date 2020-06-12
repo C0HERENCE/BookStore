@@ -44,33 +44,33 @@ namespace BookStoreDAL
 
         public static DataTable ExecuteDataTable(string sqlStr, SqlParameter[] param)
         {
-            SqlConnection conn = new SqlConnection(connStr);
-            SqlCommand cmd = new SqlCommand(sqlStr, conn);
+            //SqlConnection conn = new SqlConnection(connStr);
+            //SqlCommand cmd = new SqlCommand(sqlStr, conn);
 
-            if (param != null)
-            {
-                cmd.Parameters.AddRange(param);
-            }
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            return dt;
-            //using (SqlConnection conn = new SqlConnection(connStr))
+            //if (param != null)
             //{
-            //    using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
-            //    {
-            //        if (param != null)
-            //        {
-            //            cmd.Parameters.AddRange(param);
-            //        }
-            //        using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-            //        {
-            //            DataTable dt = new DataTable();
-            //            sda.Fill(dt);
-            //            return dt;
-            //        }
-            //    }
+            //    cmd.Parameters.AddRange(param);
             //}
+            //SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //return dt;
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                using (SqlCommand cmd = new SqlCommand(sqlStr, conn))
+                {
+                    if (param != null)
+                    {
+                        cmd.Parameters.AddRange(param);
+                    }
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
         }
         public static DataTable ExecuteDataTable(string sqlStr)
         {

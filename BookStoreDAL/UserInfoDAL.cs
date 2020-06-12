@@ -86,5 +86,25 @@ namespace BookStoreDAL
                 new SqlParameter("balance",user.balance)
             });
         }
+
+        public static int UpdateUserInfo(UserInfoModel user)
+        {
+            string sql = "update userinfo set tel=@tel,gender=@gender,balance=@balance where id = @id";
+            return (int)SqlHelper.ExecuteNonQuery(sql, new SqlParameter[] {
+                new SqlParameter("tel",user.tel),
+                new SqlParameter("gender",user.gender),
+                new SqlParameter("balance",user.balance),
+                new SqlParameter("id",user.id)
+            });
+        }
+
+        public static int UpdateUserPassword(UserInfoModel user)
+        {
+            string sql = "update userinfo set password=@newvalue where id = @id";
+            return (int)SqlHelper.ExecuteNonQuery(sql, new SqlParameter[] {
+                new SqlParameter("newvalue",user.password),
+                new SqlParameter("id",user.id),
+            });
+        }
     }
 }

@@ -61,8 +61,10 @@ namespace BookStoreBLL
                     reader.GetInt32(21),
                     reader.GetInt32(22)
                     );
+                if (!reader.IsClosed) reader.Close();
                 return book;
             }
+            if (!reader.IsClosed) reader.Close();
             BookStatModel book2 = new BookStatModel();
             book2.id = -1;
             return book2;
@@ -101,6 +103,7 @@ namespace BookStoreBLL
                     );
                 books.Add(book);
             }
+            if (!reader.IsClosed) reader.Close();
             return books;
         }
         public static List<BookStatModel> GetHighestStarsBooks(int count)
@@ -136,7 +139,13 @@ namespace BookStoreBLL
                     );
                 books.Add(book);
             }
+            if (!reader.IsClosed) reader.Close();
             return books;
+        }
+
+        public static int SetBook(BookStatModel book)
+        {
+            return BookStatDAL.UpdateBookStat(book);
         }
     }
 }

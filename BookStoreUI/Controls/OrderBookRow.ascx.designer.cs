@@ -51,7 +51,7 @@ namespace BookStoreUI.Controls
         protected global::System.Web.UI.WebControls.Label txtPrice;
 
         /// <summary>
-        /// TextBox1 control.
+        /// txtNum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
@@ -60,12 +60,12 @@ namespace BookStoreUI.Controls
         public global::System.Web.UI.WebControls.TextBox txtNum;
 
         /// <summary>
-        /// btnDelete control.
+        /// txtTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
+        public global::System.Web.UI.WebControls.Label txtTotal;
     }
 }

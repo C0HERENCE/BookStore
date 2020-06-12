@@ -7,65 +7,47 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BookStoreUI.Controls
+namespace BookStoreUI
 {
 
 
-    public partial class AddressRow
+    public partial class Orders
     {
 
         /// <summary>
-        /// linkaddress control.
+        /// txtUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.LinkButton linkaddress;
+        protected global::System.Web.UI.WebControls.Label txtUserName;
 
         /// <summary>
-        /// txtName control.
+        /// txtUserID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtName;
+        protected global::System.Web.UI.WebControls.Label txtUserID;
 
         /// <summary>
-        /// txtNO control.
+        /// list control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtNO;
+        protected global::System.Web.UI.WebControls.ListView list;
 
         /// <summary>
-        /// txtIsDefault control.
+        /// pager control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtIsDefault;
-
-        /// <summary>
-        /// txtAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtAdd;
-
-        /// <summary>
-        /// txtTel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtTel;
+        protected global::System.Web.UI.WebControls.DataPager pager;
     }
 }

@@ -7,101 +7,110 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BookStoreUI.Controls
+namespace BookStoreUI
 {
 
 
-    public partial class AddressAddModal
+    public partial class OrderDetail
     {
 
         /// <summary>
-        /// txtAddressID control.
+        /// txtOrderID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtAddressID;
+        protected global::System.Web.UI.WebControls.Label txtOrderID;
 
         /// <summary>
-        /// txtTitle control.
+        /// txtUserID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtTitle;
+        protected global::System.Web.UI.WebControls.Label txtUserID;
 
         /// <summary>
-        /// txtName control.
+        /// txtDateTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.Label txtDateTime;
 
         /// <summary>
-        /// txtTel control.
+        /// txtStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTel;
+        protected global::System.Web.UI.WebControls.Label txtStatus;
 
         /// <summary>
-        /// txtAdd control.
+        /// orderBookContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAdd;
+        protected global::System.Web.UI.WebControls.PlaceHolder orderBookContent;
 
         /// <summary>
-        /// Delete control.
+        /// AddressRowManage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Delete;
+        protected global::BookStoreUI.Controls.AddressRow AddressRowManage;
 
         /// <summary>
-        /// Default control.
+        /// txtComment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Default;
+        protected global::System.Web.UI.WebControls.TextBox txtComment;
 
         /// <summary>
-        /// Modify control.
+        /// txtOrderPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Modify;
+        protected global::System.Web.UI.WebControls.Label txtOrderPrice;
 
         /// <summary>
-        /// Add control.
+        /// txtExtraPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Add;
+        protected global::System.Web.UI.WebControls.Label txtExtraPrice;
 
         /// <summary>
-        /// Modal control.
+        /// txtOffPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.Modal Modal;
+        protected global::System.Web.UI.WebControls.Label txtOffPrice;
+
+        /// <summary>
+        /// txtTotalPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtTotalPrice;
     }
 }

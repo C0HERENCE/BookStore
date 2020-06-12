@@ -15,22 +15,76 @@ namespace BookStoreUI
     {
 
         /// <summary>
-        /// OrderBookRow control.
+        /// txtOrderID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BookStoreUI.Controls.OrderBookRow OrderBookRow;
+        protected global::System.Web.UI.WebControls.Label txtOrderID;
 
         /// <summary>
-        /// list control.
+        /// txtUserID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView list;
+        protected global::System.Web.UI.WebControls.Label txtUserID;
+
+        /// <summary>
+        /// txtDateTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtDateTime;
+
+        /// <summary>
+        /// txtStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtStatus;
+
+        /// <summary>
+        /// orderBookContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder orderBookContent;
+
+        /// <summary>
+        /// AddressRowManage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BookStoreUI.Controls.AddressRow AddressRowManage;
+
+        /// <summary>
+        /// AddressHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder AddressHolder;
+
+        /// <summary>
+        /// txtComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtComment;
 
         /// <summary>
         /// txtOrderPrice control.
@@ -69,6 +123,15 @@ namespace BookStoreUI
         protected global::System.Web.UI.WebControls.Label txtTotalPrice;
 
         /// <summary>
+        /// btnCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancel;
+
+        /// <summary>
         /// btnCheck control.
         /// </summary>
         /// <remarks>
@@ -76,5 +139,14 @@ namespace BookStoreUI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCheck;
+
+        /// <summary>
+        /// Modal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BookStoreUI.Controls.Modal Modal;
     }
 }

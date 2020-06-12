@@ -9,28 +9,32 @@ using BookStoreBLL;
 
 namespace BookStoreUI.Controls
 {
-    public partial class AddressRow : System.Web.UI.UserControl
+    public partial class AddressRow : UserControl
     {
-        public int AddressID { get; set; }
+        public AddressModel AddressInThisControl { get; set; }
+
+        public event EventHandler Click;
         protected void Page_Load(object sender, EventArgs e)
         {
             
         }
 
-        public void SetAddress(int id)
-        {
-            AddressModel address = AddressBLL.GetAddressByID(id);
-            txtAdd.Text = address.add;
-            txtName.Text = address.name;
-            txtTel.Text = address.tel;
-            txtUser.Text = address.user_id.ToString();
-        }
         public void SetAddress(AddressModel address)
         {
+            AddressInThisControl = address;
             txtAdd.Text = address.add;
             txtName.Text = address.name;
             txtTel.Text = address.tel;
-            txtUser.Text = address.user_id.ToString();
+            txtNO.Text = address.id.ToString();
+            if (address.isdefault == 1)
+            {
+                txtIsDefault.Text = "默认收货地址";
+            }
+        }
+
+        protected void linkaddress_Click(object sender, EventArgs e)
+        {
+            Click(this, e);
         }
     }
 }

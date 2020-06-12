@@ -84,10 +84,12 @@
     <Content Include="Controls\Dashboard\UserManageControls\UserStat.ascx" />
     <Content Include="Controls\Element\BookRowElement.ascx" />
     <Content Include="Controls\Element\NavBarElement.ascx" />
+    <Content Include="Controls\Element\OrderDetailBookRowElement.ascx" />
     <Content Include="Controls\Element\TopListElement.ascx" />
     <Content Include="Controls\Modal.ascx" />
     <Content Include="Controls\Navbar.ascx" />
     <Content Include="Controls\OrderBookRow.ascx" />
+    <Content Include="Controls\OrderDetailBookRow.ascx" />
     <Content Include="Controls\TopList.ascx" />
     <Content Include="Controls\WeeklyBook.ascx" />
     <Content Include="Controls\WelcomeHeader.ascx" />
@@ -1845,6 +1847,8 @@
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Details.aspx" />
+    <Content Include="OrderDetail.aspx" />
+    <Content Include="Orders.aspx" />
     <Content Include="PlaceOrder.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Public\CSS\bootstrap.css" />
@@ -2215,6 +2219,7 @@
     <Content Include="Public\JS\jquery-3.5.1.js" />
     <Content Include="Public\JS\materialize.js" />
     <Content Include="Public\JS\pagination.js" />
+    <Content Include="Public\JS\popper.min.js" />
     <Content Include="Register.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -2358,6 +2363,13 @@
     <Compile Include="Controls\Element\NavBarElement.ascx.designer.cs">
       <DependentUpon>NavBarElement.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Element\OrderDetailBookRowElement.ascx.cs">
+      <DependentUpon>OrderDetailBookRowElement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Element\OrderDetailBookRowElement.ascx.designer.cs">
+      <DependentUpon>OrderDetailBookRowElement.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Element\TopListElement.ascx.cs">
       <DependentUpon>TopListElement.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2385,6 +2397,13 @@
     </Compile>
     <Compile Include="Controls\OrderBookRow.ascx.designer.cs">
       <DependentUpon>OrderBookRow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderDetailBookRow.ascx.cs">
+      <DependentUpon>OrderDetailBookRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderDetailBookRow.ascx.designer.cs">
+      <DependentUpon>OrderDetailBookRow.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\TopList.ascx.cs">
       <DependentUpon>TopList.ascx</DependentUpon>
@@ -2598,6 +2617,20 @@
     </Compile>
     <Compile Include="Masters\Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.aspx.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderDetail.aspx.designer.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="PlaceOrder.aspx.cs">
       <DependentUpon>PlaceOrder.aspx</DependentUpon>

@@ -77,11 +77,19 @@ namespace BookStoreUI
                 Response.Redirect("/login.aspx");
             }
             int userid = (int)Session["uid"];
+            AddressModel address = AddressBLL.GetUserDefaultAddress(userid);
+            if (address.id == 0)
+            {
+                Modal.Show(this, "你还没有收货地址,请前往个人中心添加");
+                return;
+            }
+
+
             OrderModel order = new OrderModel();
-            order.address = AddressBLL.GetAddressesByUserID(userid).First();
+            order.address = address;
             BookOrderModel bookOrder = new BookOrderModel();
             bookOrder.amount = int.Parse(txtNum.Text);
-            bookOrder.price = bookOrder.amount * BookOnThisPage.price;
+            bookOrder.price = BookOnThisPage.price;
             bookOrder.book = BookOnThisPage;
             order.books = new List<BookOrderModel>() { bookOrder };
             order.comment = "";
@@ -89,14 +97,14 @@ namespace BookStoreUI
             order.status = 0;
             order.CalculateTotalPrice();
             order.user.id = userid;
-            string msg = OrderBLL.AddOrder(order);
-            if (msg=="成功")
+            int msg = OrderBLL.AddOrder(order);
+            if (msg!=-1)
             {
-                Modal.Show(this, "购买失败", 1000, HttpContext.Current.Request.Url.PathAndQuery);
+                Modal.Show(this, "下单成功，即将前往付款界面", 1000, "/placeorder.aspx?orderid=" + msg);
             }
             else
             {
-                Modal.Show(this, "下单成功，即将前往付款界面", 1000, "/placeorder.aspx");
+                Modal.Show(this, "购买失败", 1000, HttpContext.Current.Request.Url.PathAndQuery);
             }
         }
     }

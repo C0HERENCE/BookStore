@@ -55,5 +55,16 @@ namespace BookStoreDAL
             });
         }
 
+        public static int UpdateBookStat(BookStatModel book)
+        {
+            string sql = "update bookstat set stock=@stock, onsale=@onsale,price=@price,up_date = getdate(),stars=@stars where id = @bookid";
+            return SqlHelper.ExecuteNonQuery(sql, new SqlParameter[] {
+                new SqlParameter("stock",book.stock),
+                new SqlParameter("onsale",book.onsale),
+                new SqlParameter("price",book.price),
+                new SqlParameter("stars",book.stars),
+                new SqlParameter("bookid",book.id),
+            });
+        }
     }
 }
