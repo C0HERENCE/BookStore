@@ -59,19 +59,19 @@
                             管理图书的基本信息：</h6>
                         <a class="collapse-item" href="allbooks.aspx">全部图书</a>
                         <a class="collapse-item" href="bookadd.aspx">新增图书</a>
-                        <a class="collapse-item" href="alltags.aspx">标签和分类</a>
+                        <%--<a class="collapse-item" href="alltags.aspx">标签和分类</a>--%>
                         <a class="collapse-item" href="allauthors.aspx">作者和出版社</a>
                         <h6 class="collapse-header">
                             管理商品的库存,售价和状态：</h6>
                         <a class="collapse-item" href="bookstock.aspx">商品管理</a>
                         <a class="collapse-item" href="bookdetail.aspx">商品详情页</a>
-                        <a class="collapse-item" href="booksettings.aspx">优惠设置</a>
+                        <%--<a class="collapse-item" href="booksettings.aspx">优惠设置</a>--%>
                     </div>
                 </div>
             </li>
             <!-- Nav Item - Charts -->
-            <li class="nav-item"><a class="nav-link" href="bookcharts.aspx"><i class="fas fa-fw fa-chart-area">
-            </i><span>商品图表</span></a> </li>
+<%--            <li class="nav-item"><a class="nav-link" href="bookcharts.aspx"><i class="fas fa-fw fa-chart-area">
+            </i><span>商品图表</span></a> </li>--%>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Heading -->
@@ -92,8 +92,8 @@
                 </div>
             </li>
             <!-- Nav Item - Charts -->
-            <li class="nav-item"><a class="nav-link" href="usercharts.aspx"><i class="fas fa-fw fa-chart-area">
-            </i><span>用户图表</span></a> </li>
+<%--            <li class="nav-item"><a class="nav-link" href="usercharts.aspx"><i class="fas fa-fw fa-chart-area">
+            </i><span>用户图表</span></a> </li>--%>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Nav Item - Pages Collapse Menu -->
@@ -108,18 +108,18 @@
                         <h6 class="collapse-header">
                             查看和更新全部订单:</h6>
                         <a class="collapse-item" href="allorders.aspx">全部订单</a>
-                        <a class="collapse-item" href="orderdetail.aspx">订单详情</a>
-                        <a class="collapse-item" href="ordertrack.aspx"> 物流追踪</a>
+                        <a class="collapse-item" href="orderdetail.aspx">订单处理</a>
+                        <%--<a class="collapse-item" href="ordertrack.aspx"> 物流追踪</a>--%>
                     </div>
                 </div>
             </li>
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+<%--            <li class="nav-item">
                 <a class="nav-link" href="ordercharts.aspx">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>销售图表</span>
                 </a>
-            </li>
+            </li>--%>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Nav Item - Pages Collapse Menu -->
@@ -128,7 +128,7 @@
             </div>
             <!-- Nav Item - Tables -->
             <li class="nav-item"><a class="nav-link" href="settings.aspx"><i class="fas fa-fw fa-table">
-            </i><span>首页设置</span></a> </li>
+            </i><span>系统设置</span></a> </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
             <!-- Sidebar Toggler (Sidebar) -->
@@ -264,11 +264,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    点击“登出”将结束这次会话</div>
+                    是否要退出系统</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">
-                        取消</button>
-                    <a class="btn btn-primary" href="login.html">登出</a>
+                        否</button>
+                    <asp:linkbutton ID="btnquit" runat="server" class="btn btn-primary" Text="是" CausesValidation="false"  OnClick="btnquit_Click"></asp:linkbutton>
                 </div>
             </div>
         </div>

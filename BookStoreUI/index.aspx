@@ -16,7 +16,7 @@
         <uc1:WeeklyBook runat="server" ID="WeeklyBook" />
         <div class="row">
             <div class="col-sm-12 col-xl-3">
-                <uc1:TopList runat="server" ID="TopList" NameTefst="D" />
+                <uc1:TopList runat="server" ID="TopList"/>
             </div>
             <div class="col-sm-12 col-xl-9">
                 <uc1:BookRow runat="server" ID="LatestBooksRow" />

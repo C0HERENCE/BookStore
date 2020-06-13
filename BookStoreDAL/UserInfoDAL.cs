@@ -26,6 +26,15 @@ namespace BookStoreDAL
             return (int)SqlHelper.ExecuteScalar(sql, sqlParameters);
         }
 
+        public static int SelectUserCountByID(int userid)
+        {
+            string sql = "select count(*) from userinfo where id=@userid";
+            return (int)SqlHelper.ExecuteScalar(sql, new SqlParameter[]
+            {
+                new SqlParameter("userid",userid)
+            });
+        }
+
         public static int SelectUserEnabled(string name)
         {
             string sql = "select enabled from userinfo where username=@name";
@@ -89,12 +98,13 @@ namespace BookStoreDAL
 
         public static int UpdateUserInfo(UserInfoModel user)
         {
-            string sql = "update userinfo set tel=@tel,gender=@gender,balance=@balance where id = @id";
+            string sql = "update userinfo set tel=@tel,gender=@gender,balance=@balance,enabled=@enabled where id = @id";
             return (int)SqlHelper.ExecuteNonQuery(sql, new SqlParameter[] {
                 new SqlParameter("tel",user.tel),
                 new SqlParameter("gender",user.gender),
                 new SqlParameter("balance",user.balance),
-                new SqlParameter("id",user.id)
+                new SqlParameter("id",user.id),
+                new SqlParameter("enabled",user.enabled)
             });
         }
 

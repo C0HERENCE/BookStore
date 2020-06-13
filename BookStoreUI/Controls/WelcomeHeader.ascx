@@ -14,5 +14,8 @@
             <a class="btn btn-primary btn-lg" href="register.aspx" role="button">注册一个新账号</a>
             <a class="btn btn-info btn-lg" href="login.aspx" role="button">已有帐号，登录</a>
         </asp:Panel>
+        <asp:Panel  ID="Panel2" runat="server">
+            <asp:button ID="btnlogout" runat="server" OnClick="btnlogout_Click" class="btn btn-info btn-lg float-right" role="button" Text="注销"></asp:button>
+        </asp:Panel>
     </div>
 </div>

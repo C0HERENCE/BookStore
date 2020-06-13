@@ -28,9 +28,9 @@ namespace BookStoreUI.Controls
             linkDetail.PostBackUrl = "/details.aspx?book=" + bookOrder.book.id;
             imgCover.ImageUrl = "/public/images/cover/" + bookOrder.book.image;
             txtCategory.Text = bookOrder.book.category;
-            txtNum.Text = bookOrder.amount.ToString();
+            txtNum.Text = bookOrder.quantity.ToString();
             txtPrice.Text = bookOrder.price.ToString("F2");
-            TotalPrice = bookOrder.amount * bookOrder.book.price;
+            TotalPrice = bookOrder.quantity * bookOrder.book.price;
             txtTotal.Text = TotalPrice.ToString("F2");
         }
 
@@ -52,10 +52,10 @@ namespace BookStoreUI.Controls
 
         protected void txtNum_TextChanged(object sender, EventArgs e)
         {
-            BookOrderInThisControl.amount = int.Parse(txtNum.Text);
+            BookOrderInThisControl.quantity = int.Parse(txtNum.Text);
             OrderBLL.SetBookQuantity(BookOrderInThisControl, OrderOnThisPage);
-            txtNum.Text = BookOrderInThisControl.amount.ToString();
-            TotalPrice = BookOrderInThisControl.amount * BookOrderInThisControl.price;
+            txtNum.Text = BookOrderInThisControl.quantity.ToString();
+            TotalPrice = BookOrderInThisControl.quantity * BookOrderInThisControl.price;
             txtTotal.Text = TotalPrice.ToString("F2");
         }
     }

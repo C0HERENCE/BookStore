@@ -23,8 +23,8 @@
                 CC书店
             </a>
             <a class="py-2 d-none d-md-inline-block" href="Orders.aspx" >我的订单</a>
-            <a class="py-2 d-none d-md-inline-block" href="#" >购物车</a>
-            <a class="py-2 d-none d-md-inline-block" href="Profile.aspx" >个人信息</a>
+            <a class="py-2 d-none d-md-inline-block" href="Cart.aspx" >购物车</a>
+            <a class="py-2 d-none d-md-inline-block" href="Profile.aspx" >个人中心</a>
             <a class="py-2 d-none d-md-inline-block" href="Login.aspx?isadmin=true">管理系统</a>
         </div>
     </nav>

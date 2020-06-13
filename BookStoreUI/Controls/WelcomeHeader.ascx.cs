@@ -38,7 +38,21 @@ namespace BookStoreUI.Controls
                 }
                 txtGreeting.Text = greatting + username;
                 Panel1.Visible = false;
+                Panel2.Visible = true;
             }
+            else
+            {
+                Panel1.Visible = true;
+                Panel2.Visible = false;
+            }
+        }
+
+        protected void btnlogout_Click(object sender, EventArgs e)
+        {
+            Session["uname"] = null;
+            Session["uid"] = null;
+            Session["isadmin"] = null;
+            Response.Redirect("/index.aspx");
         }
     }
 }

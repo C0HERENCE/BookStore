@@ -88,7 +88,7 @@ namespace BookStoreUI
             OrderModel order = new OrderModel();
             order.address = address;
             BookOrderModel bookOrder = new BookOrderModel();
-            bookOrder.amount = int.Parse(txtNum.Text);
+            bookOrder.quantity = int.Parse(txtNum.Text);
             bookOrder.price = BookOnThisPage.price;
             bookOrder.book = BookOnThisPage;
             order.books = new List<BookOrderModel>() { bookOrder };
@@ -106,6 +106,26 @@ namespace BookStoreUI
             {
                 Modal.Show(this, "购买失败", 1000, HttpContext.Current.Request.Url.PathAndQuery);
             }
+        }
+
+        protected void btnCart_Click(object sender, EventArgs e)
+        {
+            if (Session["uid"] == null)
+            {
+                Response.Redirect("/login.aspx");
+            }
+
+            int userid = (int)Session["uid"];
+            CartModel cart = new CartModel();
+            cart.user.id = userid;
+
+            BookOrderModel bookOrder = new BookOrderModel();
+            bookOrder.quantity = int.Parse(txtNum.Text);
+            bookOrder.price = BookOnThisPage.price;
+            bookOrder.book = BookOnThisPage;
+
+            if (CartBLL.AddBookToCart(cart, bookOrder) > 0)
+                Modal.Show(this,"已添加到购物车");
         }
     }
 }

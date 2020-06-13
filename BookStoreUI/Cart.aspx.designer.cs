@@ -7,83 +7,74 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Dashboard
+namespace BookStoreUI
 {
 
 
-    public partial class userdetail
+    public partial class Cart
     {
 
         /// <summary>
-        /// txtuserid control.
+        /// txtUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtuserid;
+        protected global::System.Web.UI.WebControls.Label txtUserName;
 
         /// <summary>
-        /// btnCheck control.
+        /// txtUserID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCheck;
+        protected global::System.Web.UI.WebControls.Label txtUserID;
 
         /// <summary>
-        /// txtNickName control.
+        /// list control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtNickName;
+        protected global::System.Web.UI.WebControls.ListView list;
 
         /// <summary>
-        /// txtTel control.
+        /// pager control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtTel;
+        protected global::System.Web.UI.WebControls.DataPager pager;
 
         /// <summary>
-        /// TextRegDate control.
+        /// txtOrderPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TextRegDate;
+        protected global::System.Web.UI.WebControls.Label txtOrderPrice;
 
         /// <summary>
-        /// txtMail control.
+        /// btnPlaceOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtMail;
+        protected global::System.Web.UI.WebControls.Button btnPlaceOrder;
 
         /// <summary>
-        /// txtGender control.
+        /// Modal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtGender;
-
-        /// <summary>
-        /// txtBalance control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtBalance;
+        protected global::BookStoreUI.Controls.Modal Modal;
     }
 }

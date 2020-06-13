@@ -11,7 +11,7 @@ namespace Dashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Server.Transfer("/dashboard/allbooks.aspx");
         }
     }
 }

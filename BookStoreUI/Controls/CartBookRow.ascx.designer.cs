@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BookStoreUI.Controls.Element
+namespace BookStoreUI.Controls
 {
 
 
-    public partial class BookRowElement
+    public partial class CartBookRow
     {
 
         /// <summary>
@@ -24,13 +24,22 @@ namespace BookStoreUI.Controls.Element
         protected global::System.Web.UI.WebControls.Image imgCover;
 
         /// <summary>
-        /// txtBookTitle control.
+        /// linkDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtBookTitle;
+        protected global::System.Web.UI.WebControls.HyperLink linkDetail;
+
+        /// <summary>
+        /// txtCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtCategory;
 
         /// <summary>
         /// txtPrice control.
@@ -42,12 +51,21 @@ namespace BookStoreUI.Controls.Element
         protected global::System.Web.UI.WebControls.Label txtPrice;
 
         /// <summary>
-        /// linkDetail control.
+        /// txtNum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink linkDetail;
+        protected global::System.Web.UI.WebControls.TextBox txtNum;
+
+        /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelete;
     }
 }

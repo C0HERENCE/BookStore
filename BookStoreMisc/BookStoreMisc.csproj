@@ -62,6 +62,7 @@
     <Compile Include="BookInfoModel.cs" />
     <Compile Include="BookOrderModel.cs" />
     <Compile Include="BookStatModel.cs" />
+    <Compile Include="CartModel.cs" />
     <Compile Include="CategoryModal.cs" />
     <Compile Include="MailValidation.cs" />
     <Compile Include="MD5Encrypt.cs" />

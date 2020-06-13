@@ -101,5 +101,10 @@ namespace BookStoreBLL
         {
             return BookInfoDAL.SelectBookByCategory(id);
         }
+
+        public static void SetBook(BookInfoModel book)
+        {
+            BookInfoDAL.UpdateBook(book);
+        }
     }
 }

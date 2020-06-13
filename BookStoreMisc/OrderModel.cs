@@ -27,7 +27,7 @@ namespace BookStoreMisc
         public int id = 0;
         public UserInfoModel user = new UserInfoModel();
         public AddressModel address;
-        public List<BookOrderModel> books;
+        public List<BookOrderModel> books = new List<BookOrderModel>();
         public DateTime dateTime = DateTime.Now;
         public double totalPrice = 0;
         public string comment = "";
@@ -38,7 +38,7 @@ namespace BookStoreMisc
             totalPrice = 0;
             foreach (BookOrderModel bookOrder in books)
             {
-                totalPrice += bookOrder.price*bookOrder.amount;
+                totalPrice += bookOrder.price*bookOrder.quantity;
             }
             return totalPrice;
         }

@@ -40,5 +40,10 @@ namespace BookStoreBLL
             if (!reader.IsClosed) reader.Close();
             return categories;
         }
+
+        public static int GetCategoryParent(int id)
+        {
+            return CategoryDAL.SelectCategoryParent(id);
+        }
     }
 }

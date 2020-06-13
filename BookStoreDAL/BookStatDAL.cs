@@ -22,6 +22,14 @@ namespace BookStoreDAL
             return SqlHelper.ExecuteDataTable(sql);
         }
 
+        public static int SelectBookCountByID(int bookid)
+        {
+            string sql = "select count(*) from bookstat where id=@id";
+            return (int)SqlHelper.ExecuteScalar(sql, new SqlParameter[]{
+                new SqlParameter("id",bookid)
+            });
+        }
+
         public static int UpdateBookOnSale(int id,int onsale)
         {
             string sql = "update bookstat set onsale=@onsale where id=@id";
@@ -50,6 +58,17 @@ namespace BookStoreDAL
         public static SqlDataReader SelectHighestStarsBookOnSale(int count)
         {
             string sql = "select TOP(0+@count) * from bookstat_full where onsale=1 order by stars DESC";
+            return SqlHelper.ExecuteDataReader(sql, new SqlParameter[] {
+                new SqlParameter("count",count)
+            });
+        }
+
+        public static SqlDataReader SelectTopSellingBooksOnSale(int count)
+        {
+            string sql = @"select TOP(0+@count) book_id,sum(amount) as total
+                            from bookinfo_order as od
+                            group by book_id
+                            order by total desc";
             return SqlHelper.ExecuteDataReader(sql, new SqlParameter[] {
                 new SqlParameter("count",count)
             });

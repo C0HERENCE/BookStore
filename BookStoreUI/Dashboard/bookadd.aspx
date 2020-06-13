@@ -124,7 +124,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">添加新作者</button>
+                    <a type="button" class="btn btn-secondary" data-dismiss="modal" href="/dashboard/allauthors.aspx">去添加新作者</a>
                     <button type="button" class="btn btn-success" id="authorbtn" data-dismiss="modal">确定</button>
                 </div>
             </div>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">添加新出版社</button>
+                    <a type="button" class="btn btn-secondary" data-dismiss="modal" href="/dashboard/allauthors.aspx">去添加新出版社</a>
                     <button type="button" class="btn btn-success" id="publisherbtn" data-dismiss="modal">确定</button>
                 </div>
             </div>

@@ -69,5 +69,31 @@ namespace BookStoreDAL
                 new SqlParameter("onsale",1),
             });
         }
+
+        public static void UpdateBook(BookInfoModel book)
+        {
+            string sql = @"update bookinfo set 
+                            title=@title,
+                            origintitle=@origintitle,
+                            subtitle=@subtitle,
+                            image=@image,
+                            category_id=@categoryid,author_id=@author,isbn=@isbn,publisher_id=@publisher,pubdate=@pubdate,pages=@pages,price=@price
+                            where id=@id";
+            int a = SqlHelper.ExecuteNonQuery(sql, new SqlParameter[]
+            {
+                new SqlParameter("title",book.title),
+                new SqlParameter("origintitle",book.origintitle),
+                new SqlParameter("subtitle",book.subtitle),
+                new SqlParameter("image",book.image),
+                new SqlParameter("categoryid",book.category_id),
+                new SqlParameter("author",book.author_id),
+                new SqlParameter("isbn",book.isbn),
+                new SqlParameter("publisher",book.publisher_id),
+                new SqlParameter("pages",book.pages),
+                new SqlParameter("price",book.price),
+                new SqlParameter("id",book.id),
+                new SqlParameter("pubdate",book.pubdate),
+            });
+        }
     }
 }

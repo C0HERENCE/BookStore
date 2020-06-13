@@ -65,11 +65,13 @@
     <Content Include="App_Data\bookstore_log.ldf">
       <DependentUpon>bookstore.mdf</DependentUpon>
     </Content>
+    <Content Include="Cart.aspx" />
     <Content Include="Category.aspx" />
     <Content Include="Controls\AddressAddModal.ascx" />
     <Content Include="Controls\AddressRow.ascx" />
     <Content Include="Controls\BookRow.ascx" />
     <Content Include="Controls\Carousel.ascx" />
+    <Content Include="Controls\CartBookRow.ascx" />
     <Content Include="Controls\CategoryBookRow.ascx" />
     <Content Include="Controls\Dashboard\BookManageControls\BookDataTable.ascx" />
     <Content Include="Controls\Dashboard\BookManageControls\BookEdit.ascx" />
@@ -1968,9 +1970,6 @@
     <Content Include="Public\Images\1.jpg" />
     <Content Include="Public\Images\2.jpg" />
     <Content Include="Public\Images\3.jpg" />
-    <Content Include="Public\Images\ad1.jpg" />
-    <Content Include="Public\Images\ad2.jpg" />
-    <Content Include="Public\Images\ad3.jpg" />
     <Content Include="Public\Images\Cover\s1011204.jpg" />
     <Content Include="Public\Images\Cover\s1015872.jpg" />
     <Content Include="Public\Images\Cover\s1035374.jpg" />
@@ -2201,17 +2200,6 @@
     <Content Include="Public\Images\Cover\s9108552.jpg" />
     <Content Include="Public\Images\Cover\s9130587.jpg" />
     <Content Include="Public\Images\Cover\s9853099.jpg" />
-    <Content Include="Public\Images\logo.jpg" />
-    <Content Include="Public\Images\prod1.jpg" />
-    <Content Include="Public\Images\prod2.jpg" />
-    <Content Include="Public\Images\prod3.jpg" />
-    <Content Include="Public\Images\prod4.jpg" />
-    <Content Include="Public\Images\prod5.jpg" />
-    <Content Include="Public\Images\selling1.jpg" />
-    <Content Include="Public\Images\selling2.jpg" />
-    <Content Include="Public\Images\selling3.jpg" />
-    <Content Include="Public\Images\selling4.jpg" />
-    <Content Include="Public\Images\selling5.jpg" />
     <Content Include="Public\Images\User\admin.jpg" />
     <Content Include="Public\JS\bootstrap-input-spinner.js" />
     <Content Include="Public\JS\bootstrap.js" />
@@ -2230,6 +2218,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Category.aspx.cs">
       <DependentUpon>Category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2264,6 +2259,13 @@
     </Compile>
     <Compile Include="Controls\Carousel.ascx.designer.cs">
       <DependentUpon>Carousel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CartBookRow.ascx.cs">
+      <DependentUpon>CartBookRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CartBookRow.ascx.designer.cs">
+      <DependentUpon>CartBookRow.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\CategoryBookRow.ascx.cs">
       <DependentUpon>CategoryBookRow.ascx</DependentUpon>
@@ -2568,6 +2570,7 @@
       <DependentUpon>userdetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Developer\Class1.cs" />
+    <Compile Include="SqlHelper.cs" />
     <Content Include="Developer\Class2.txt" />
     <Compile Include="Developer\ISBN.aspx.cs">
       <DependentUpon>ISBN.aspx</DependentUpon>
@@ -2860,6 +2863,7 @@
     <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\processing.scss" />
     <Content Include="Dashboard\vendor\datatables\Editor-1.9.3\css\scss\upload.scss" />
     <Content Include="Masters\Details.master" />
+    <Content Include="IndexSettings.json" />
     <None Include="Public\CSS\LayUI\font\iconfont.eot" />
     <None Include="Public\CSS\LayUI\font\iconfont.ttf" />
     <None Include="Public\CSS\LayUI\font\iconfont.woff" />

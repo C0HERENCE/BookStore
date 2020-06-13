@@ -31,7 +31,7 @@ namespace BookStoreBLL
             {
                 BookOrderModel bookOrder = new BookOrderModel();
                 bookOrder.book = BookStatBLL.GetBookByID(reader.GetInt32(0));
-                bookOrder.amount = reader.GetInt32(2);
+                bookOrder.quantity = reader.GetInt32(2);
                 bookOrder.price = reader.GetDouble(3);
                 order.books.Add(bookOrder);
             }

@@ -34,6 +34,11 @@ namespace BookStoreBLL
             return msg;
         }
 
+        public static int GetUserCountByID(int userid)
+        {
+            return UserInfoDAL.SelectUserCountByID(userid);
+        }
+
         public static int GetUserCountByName(string name)
         {
             return UserInfoDAL.SelectUserCountByName(name);

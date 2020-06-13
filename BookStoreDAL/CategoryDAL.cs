@@ -17,5 +17,13 @@ namespace BookStoreDAL
                 new SqlParameter[] { new SqlParameter("role", role) }
                 );
         }
+
+        public static int SelectCategoryParent(int id)
+        {
+            return (int)SqlHelper.ExecuteScalar(
+                "select role from category where id=@id",
+                new SqlParameter[] { new SqlParameter("id", id) }
+                );
+        }
     }
 }

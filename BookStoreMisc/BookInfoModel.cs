@@ -7,20 +7,20 @@ namespace BookStoreMisc
 {
     public class BookInfoModel
     {
-        public int id;
-        public string isbn;
-        public string title;
-        public string origintitle;
-        public string subtitle;
-        public string image;
-        public int author_id;
-        public int publisher_id;
-        public int category_id;
-        public string pubdate;
-        public string pages;
-        public string price;
-        public string summary;
-        public string catalog;
+        public int id = 0;
+        public string isbn = "";
+        public string title = "";
+        public string origintitle = "";
+        public string subtitle = "";
+        public string image ="";
+        public int author_id = 0;
+        public int publisher_id = 0;
+        public int category_id = 0;
+        public string pubdate="";
+        public string pages="";
+        public string price="";
+        public string summary="";
+        public string catalog="";
 
         public BookInfoModel()
         {

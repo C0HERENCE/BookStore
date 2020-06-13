@@ -38,7 +38,7 @@ namespace BookStoreDAL
             return SqlHelper.ExecuteNonQuery(sql2, new SqlParameter[] {
                     new SqlParameter("bookid",bookOrder.book.id),
                     new SqlParameter("order_id",order.id),
-                    new SqlParameter("amount",bookOrder.amount),
+                    new SqlParameter("amount",bookOrder.quantity),
                     new SqlParameter("price",bookOrder.price)
                 });
         }
@@ -47,7 +47,7 @@ namespace BookStoreDAL
         {
             string sql = "update bookinfo_order set amount = @newvalue where order_id=@orderid and book_id=@bookid";
             return SqlHelper.ExecuteNonQuery(sql, new SqlParameter[] {
-                new SqlParameter("newvalue",bookOrder.amount),
+                new SqlParameter("newvalue",bookOrder.quantity),
                 new SqlParameter("orderid",order.id),
                 new SqlParameter("bookid",bookOrder.book.id)
                 });

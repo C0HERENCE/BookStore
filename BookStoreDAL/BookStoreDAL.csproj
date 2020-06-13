@@ -61,6 +61,7 @@
     <Compile Include="BookInfoDAL.cs" />
     <Compile Include="AuthorDAL.cs" />
     <Compile Include="BookStatDAL.cs" />
+    <Compile Include="CartDAL.cs" />
     <Compile Include="OrderDAL.cs" />
     <Compile Include="PublisherDAL.cs" />
     <Compile Include="CategoryDAL.cs" />

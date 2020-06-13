@@ -85,13 +85,13 @@
                 '<td>原标题:</td>' +
                 '<td colspan="2">' + d.origintitle + '</td>' +
                 '<td>子标题:</td>' +
-                '<td colspan="1">' + d.subtitile + '</td>' +
+                '<td colspan="1">' + (typeof (d.subtitile) == "undefined" ?"(无)":d.subtitile) + '</td>' +
                 '<td>出版日期:</td>' +
                 '<td colspan="1">' + d.pubdate + '</td>' +
                 '</tr>' +
                 '<tr>' +
                 '<td>封面:</td>' +
-                '<td colspan="2"><img src="' + d.image + '" style-"width:100px;height:100%"></img></td>' +
+                '<td colspan="2"><img src="/public/images/cover/' + d.image + '" style="width:100px;height:140px"></img></td>' +
                 '<td>页码:</td>' +
                 '<td colspan="1">' + d.pages + '</td>' +
                 '<td>定价:</td>' +
@@ -103,11 +103,11 @@
                 '</tr>' +
                 '<tr>' +
                 '<td>作者详情:</td>' +
-                '<td colspan="6">' + d.author_intro + '</td>' +
+                '<td colspan="6">' + (typeof (d.author_intro) == "undefined" ? "(无)" : d.author_intro) + '</td>' +
                 '</tr>' +
                 '<tr>' +
                 '<td>目录:</td>' +
-                '<td colspan="6">' + d.catalog + '</td>' +
+                '<td colspan="6">' + (typeof (d.catalog) == "undefined" ? "(无)" : d.catalog) + '</td>' +
                 '</tr>' +
                 '</table>';
         }
@@ -132,6 +132,28 @@
                     { data: "author" },
                     { data: "publisher" },
                 ],
+                language: {
+                    processing: "正在获取数据，请稍后...",
+                    search: "搜索",
+                    lengthMenu: "显示 _MENU_ 条",
+                    info: "当前显示的第是 _START_ 到 _END_ 行数据,共 _TOTAL_ 行数据",
+                    infoEmpty: "记录数为0",
+                    infoFiltered: "((全部记录数 _MAX_ 条))",
+                    infoPostFix: "",
+                    loadingRecords: "系统处理中,请稍等...",
+                    zeroRecords: "没有您要搜索的内容",
+                    emptyTable: "没有数据",
+                    paginate: {
+                        first: "第一页",
+                        previous: "上一页",
+                        next: "下一页",
+                        last: "最后一页"
+                    },
+                    aria: {
+                        sortAscending: "以升序排列此列",
+                        sortDescending: "以降序排列此列"
+                    }
+                },
             });
             // Add event listener for opening and closing details
             $('#allbooksdata tbody').on('click', 'td.details-control', function () {

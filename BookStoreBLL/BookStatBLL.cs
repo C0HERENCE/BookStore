@@ -21,6 +21,11 @@ namespace BookStoreBLL
             return JsonConvert.SerializeObject(BookStatDAL.SelectAllBooks());
         }
 
+        public static int GetBookCountByID(int bookid)
+        {
+            return BookStatDAL.SelectBookCountByID(bookid);
+        }
+
         public static string SetBookOnSale(int id, int onsale)
         {
             string msg = "成功";
@@ -141,6 +146,17 @@ namespace BookStoreBLL
             }
             if (!reader.IsClosed) reader.Close();
             return books;
+        }
+
+        public static Dictionary<BookStatModel,int> GetTopSellingBooks(int count)
+        {
+            Dictionary<BookStatModel, int> dict = new Dictionary<BookStatModel, int>();
+            var reader = BookStatDAL.SelectTopSellingBooksOnSale(count);
+            while (reader.Read())
+            {
+                dict.Add(BookStatBLL.GetBookByID(reader.GetInt32(0)), reader.GetInt32(1));
+            }
+            return dict;
         }
 
         public static int SetBook(BookStatModel book)

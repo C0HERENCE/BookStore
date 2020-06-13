@@ -17,16 +17,15 @@ namespace BookStoreUI.Controls.Element
             
         }
 
-        public void SetBook(BookInfoModel book)
+        public void SetBook(BookStatModel book,int rank,int sales)
         {
-            Label1.Text = Panel1.ClientID;
-            Label2.Text = "Bookname";
-            Label3.Text = "descdescdescdescdescdescdescdescdescdescdescdesc";
-            Image1.ImageUrl = "~/UI/Public/Images/selling1.jpg";
-            //Page.RegisterStartupScript("script", "<script> document.getElementById('identify').setAttribute('id', 'abc');</script>");
-            //Page.RegisterStartupScript("script", "<script> alert('3');</script>");
+            txtClientID.Text = rank.ToString();
+            txtTitle.Text = book.title;
+            txtSales.Text = "总销量:" + sales.ToString();
+            txtSummary.Text = book.summary;
+            imgCover.ImageUrl = "/public/images/cover/" + book.image;
             Panel2.Attributes["data-target"] ="#" + Panel1.ClientID;
-            //Panel1.CssClass += " show";
+            linkDetail.NavigateUrl = "/details.aspx?book=" + book.id.ToString();
         }
 
         public void SetParent(string parent)

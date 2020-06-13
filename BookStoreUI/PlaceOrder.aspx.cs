@@ -110,7 +110,7 @@ namespace BookStoreUI
            
             foreach (BookOrderModel book in OrderOnThisPage.books)
             {
-                if (book.amount > book.book.stock)
+                if (book.quantity > book.book.stock)
                 {
                     Modal.Show(this, "无法购买：《" + book.book.title + "》的库存量不足");
                     return;
@@ -132,7 +132,7 @@ namespace BookStoreUI
 
             foreach (BookOrderModel book in OrderOnThisPage.books)
             {
-                book.book.stock -= book.amount;
+                book.book.stock -= book.quantity;
                 BookStatBLL.SetBook(book.book);
             }
             OrderOnThisPage.user.balance -= OrderOnThisPage.totalPrice;

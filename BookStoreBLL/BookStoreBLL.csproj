@@ -65,6 +65,7 @@
     <Compile Include="BookInfoBLL.cs" />
     <Compile Include="AuthorBLL.cs" />
     <Compile Include="BookStatBLL.cs" />
+    <Compile Include="CartBLL.cs" />
     <Compile Include="OrderBLL.cs" />
     <Compile Include="PublisherBLL.cs" />
     <Compile Include="CategoryBLL.cs" />

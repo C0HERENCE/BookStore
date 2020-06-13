@@ -13,5 +13,13 @@ namespace Dashboard
         {
 
         }
+
+        protected void btnquit_Click(object sender, EventArgs e)
+        {
+            Session["uid"] = null;
+            Session["uname"] = null;
+            Session["isadmin"] = null;
+            Response.Redirect("/Index.aspx");
+        }
     }
 }

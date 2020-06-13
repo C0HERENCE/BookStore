@@ -81,7 +81,7 @@
             <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
                 <a href="#collapseauthor" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseauthor">
-                    <h6 class="m-0 font-weight-bold text-primary">作者管理</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">作者数据</h6>
                 </a>
             <!-- Card Content - Collapse -->
                 <div class="collapse show" id="collapseauthor">
@@ -112,7 +112,7 @@
             <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
                 <a href="#collapspublisher" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapspublisher">
-                    <h6 class="m-0 font-weight-bold text-primary">出版社管理</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">出版社数据</h6>
                 </a>
             <!-- Card Content - Collapse -->
                 <div class="collapse show" id="collapspublisher">
@@ -140,6 +140,24 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
     <script src="vendor/datatables/datatables.js"></script>
     <script type="text/javascript">
+        var language = {
+            processing: "正在获取数据，请稍后...",
+            search: "搜索",
+            lengthMenu: "显示 _MENU_ 条",
+            info: "当前显示的第是 _START_ 到 _END_ 行数据,共 _TOTAL_ 行数据",
+            infoEmpty: "记录数为0",
+            infoFiltered: "((全部记录数 _MAX_ 条))",
+            infoPostFix: "",
+            loadingRecords: "系统处理中,请稍等...",
+            zeroRecords: "没有您要搜索的内容",
+            emptyTable: "没有数据",
+            paginate: {
+                first: "第一页",
+                previous: "上一页",
+                next: "下一页",
+                last: "最后一页"
+            }
+        }
         $('[href="allauthors.aspx"]').addClass('active').parent().parent().collapse('show').parent().addClass('active')
         $(document).ready(function () {
             $('#authortable').DataTable({
@@ -151,7 +169,8 @@
                                 { data: "id" },
                                 { data: "name" },
                                 { data: "intro" },
-                            ],
+                ],
+                "language": language
             });
 
             $('#publishertable').DataTable({
@@ -162,7 +181,8 @@
                 "columns": [
                                 { data: "id" },
                                 { data: "name" },
-                            ],
+                ],
+                "language": language
             });
         });
     </script>

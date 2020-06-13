@@ -40,7 +40,7 @@
                     <asp:TextBox ID="txtNum" runat="server" type="number" value="1" min="1" max="100" step="1"></asp:TextBox>
                 </div>
                 <div class="col-lg-3 col-sm-6">
-                    <asp:Button ID="btnCart" runat="server" Text="加入购物车" CssClass="btn btn-outline-primary" style="width:100%" />
+                    <asp:Button ID="btnCart" runat="server" Text="加入购物车" CssClass="btn btn-outline-primary" style="width:100%" OnClick="btnCart_Click" />
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <asp:Button ID="btnBuy" runat="server" Text="立即购买" CssClass="btn btn-primary" style="width:100%" OnClick="btnBuy_Click"/>

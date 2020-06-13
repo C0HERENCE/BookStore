@@ -24,22 +24,22 @@ namespace BookStoreUI.Controls.Element
         protected global::System.Web.UI.WebControls.Panel Panel2;
 
         /// <summary>
-        /// Label1 control.
+        /// txtClientID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label txtClientID;
 
         /// <summary>
-        /// Label2 control.
+        /// txtTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label txtTitle;
 
         /// <summary>
         /// Panel1 control.
@@ -51,30 +51,39 @@ namespace BookStoreUI.Controls.Element
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// Image1 control.
+        /// imgCover control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Image imgCover;
 
         /// <summary>
-        /// Label3 control.
+        /// txtSales control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label txtSales;
 
         /// <summary>
-        /// Button1 control.
+        /// txtSummary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label txtSummary;
+
+        /// <summary>
+        /// linkDetail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink linkDetail;
     }
 }
